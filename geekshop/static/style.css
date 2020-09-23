@@ -226,6 +226,16 @@ body {
     left: 693px;
 }
 
+.img-bottom-border-main {
+    position: absolute;
+    background-color: #ffffff;
+    width: 57px;
+    height: 3px;
+    top: 173px;
+    left: 693px;
+    z-index: 100;
+}
+
 .small-text {
     color: #ffffff;
     font-family: roboto-condensed, sans-serif;

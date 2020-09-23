@@ -18,9 +18,13 @@ from django.urls import path
 import mainapp.views as mainapp
 
 urlpatterns = [
-    path('', mainapp.main),
-    path('gallery/', mainapp.gallery),
-    path('contacts/',mainapp.contacts),
-    path('good/', mainapp.good),
+    path('', mainapp.main, name='main'),
+    path('gallery/', mainapp.gallery, name='gallery'),
+    path('contacts/',mainapp.contacts, name='contacts'),
+    path('good/', mainapp.good, name='good'),
+    path('about/', mainapp.about, name='about'),
+    path('services/', mainapp.services, name='services'),
+    path('news/', mainapp.news, name='news'),
+    path('team/', mainapp.team, name='team'),
     path('admin/', admin.site.urls),
 ]

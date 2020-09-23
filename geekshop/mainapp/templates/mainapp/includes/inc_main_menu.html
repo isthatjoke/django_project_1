@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<ul class="menu clearfix">
+    {% for item in links_menu %}
+        <li class="menu-list">
+            <a href="{% url item.href %}"
+                                 {% if request.resolver_match.url_name == item.name %}class="menu-link active"
+
+                                 {% else %}class="menu-link"{% endif %}>
+                {{ item.name|title }}
+            </a></li>
+    {% endfor %}
+</ul>
+<div class="broke-line">
+    <img class="img-broke-line" src="{% static 'img/figure_1_1.png' %}" alt="broke-line">
+</div>
+<div class="menu-bottom-border">
+
+<img {% if request.resolver_match.url_name == 'main' %}
+    class="img-bottom-border-main"
+    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"
+    {% endif %}>
+
+<img {% if request.resolver_match.url_name == 'about' %}
+    class="img-bottom-border-about"
+    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
+
+<img {% if request.resolver_match.url_name == 'services' %}
+    class="img-bottom-border-services"
+    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
+
+<img {% if request.resolver_match.url_name == 'gallery' %}
+    class="img-bottom-border-gallery"
+    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
+
+<img {% if request.resolver_match.url_name == 'news' %}
+    class="img-bottom-border-news"
+    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
+
+<img {% if request.resolver_match.url_name == 'team' %}
+    class="img-bottom-border-team"
+    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
+
+<img {% if request.resolver_match.url_name == 'contacts' %}
+    class="img-bottom-border-contacts"
+    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
+
+</div>
+
+

@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<meta charset="UTF-8">
+<title>{% for item in links_menu %}
+    {% if request.resolver_match.url_name == item.name %}{{ item.name|title }}
+    {% endif %}
+    {% endfor %}
+</title>
+<link rel="stylesheet" {% if request.resolver_match.url_name == 'main' %}href="{% static 'style.css' %}
+{% else %}href="{% static 'style_other.css' %}{% endif %}">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/pen6rnr.css">
+<link rel="stylesheet" href="https://use.typekit.net/pen6rnr.css">
