@@ -10,41 +10,168 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="lesson_2">
-      <change afterPath="$PROJECT_DIR$/dump.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/load.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainapp/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_gallery_sub_menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/games_images/World_of_Warships.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/games_images/assassin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/games_images/bf1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/games_images/bf2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/games_images/bf4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/games_images/cod.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/games_images/for_honor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/games_images/wot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/gallery-description:hover.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/geekshop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="lesson_3">
+      <change afterPath="$PROJECT_DIR$/authapp/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/templates/authapp/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainapp/json/games.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainapp/json/gametypes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainapp/json/load.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainapp/management/commands/fill.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/.idea/geekshop.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/dump.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/geekshop/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/geekshop/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/geekshop/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/geekshop/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/load.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/admin/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/contacts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/gallery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/good.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/includes/inc_about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/includes/inc_gallery_sub_menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/includes/inc_head.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/includes/inc_main_menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/includes/inc_main_team_text_and_icons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/includes/inc_news.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/includes/inc_our_team.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/includes/inc_services.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/news.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/services.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/templates/mainapp/team.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/mainapp/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/media/games_images/World_of_Warships.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/media/games_images/assassin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/media/games_images/bf1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/media/games_images/bf2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/media/games_images/bf4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/media/games_images/cod.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/media/games_images/for_honor.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/media/games_images/tomb_raider.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/media/games_images/wot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/requerements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/$.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/532219.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/ACCHD_03_ParkourOnLog_321724.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/ACCHD_05_SailingSunsetVillage_321730.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/ACCHD_09_SailingSunsetByVillage_321736.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/ACRR_01_Cinematic_NewYork_321742.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/Layer_3_copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/Thief.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/World_of_Warships.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/arrow-up-bold-circle-outline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/arrow-up-bold-circle-outline.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/arrow_up.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/assassin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/back.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/back_page.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/bf1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/bf2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/bf4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/branch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/cda8d63e371e3da4b332164c3da4ada5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/cod.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/dishonored.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/ellipse_1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/ellipse_3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/email.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/f.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/facebook-logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/facebook-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/fig_3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/figure_1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/figure_1_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/figure_2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/for_honor.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/g3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/g7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/g9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/header_back.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/hitman.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/phone.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/poll.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/right-arrow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/rss-feed-suscription-button-symbol-for-interface-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/rss-feed-suscription-button-symbol-for-interface.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/ryse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/shadow_of_war.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_10.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_10_1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_12.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_14.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_14_1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_15.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_16.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_18.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_19.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_20.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/square_3_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/subscribe_background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/t1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/t2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/t3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/t4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/tomb_raider.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/twitter-logo-silhouette.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/twitter-logo-silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/upper-comma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/vk-social-network-logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/vk-social-network-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/wot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/img/wow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/js/gallery-description:hover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/links_menu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../geekshop 2/static/style_other.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_head.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/links_menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/links_menu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style_other.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style_other.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/links_menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/json/links_menu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style_other.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style_other.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,16 +185,42 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="HTML File" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/.." source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/.." source="lesson_4" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="lesson_2" />
+        <entry key="$PROJECT_DIR$/.." value="lesson_3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -83,7 +236,6 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -97,14 +249,36 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$/mainapp/json" />
+      <recent name="$PROJECT_DIR$/authapp" />
       <recent name="$PROJECT_DIR$/mainapp" />
-      <recent name="$PROJECT_DIR$/mainapp/templates/mainapp/includes" />
-      <recent name="$PROJECT_DIR$/geekshop" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.upload">
+  <component name="RunManager" selected="Python.forms">
+    <configuration name="forms" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="geekshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/authapp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/authapp/forms.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="upload" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="geekshop" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,6 +348,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.forms" />
         <item itemvalue="Python.upload" />
         <item itemvalue="Python.views" />
       </list>
@@ -196,7 +371,11 @@
       <workItem from="1601029657879" duration="14743000" />
       <workItem from="1601136294737" duration="963000" />
       <workItem from="1601141536421" duration="5448000" />
-      <workItem from="1601160082566" duration="1604000" />
+      <workItem from="1601160082566" duration="6179000" />
+      <workItem from="1601320847886" duration="507000" />
+      <workItem from="1601321385042" duration="8645000" />
+      <workItem from="1601402573438" duration="927000" />
+      <workItem from="1601403623190" duration="15395000" />
     </task>
     <task id="LOCAL-00001" summary="first_commit">
       <created>1600511382327</created>
@@ -219,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600887330454</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lesson_3">
+      <created>1601196381833</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601196381833</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,69 +427,70 @@
     <MESSAGE value="first_commit" />
     <MESSAGE value="requeremnts" />
     <MESSAGE value="lesson_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson_2" />
+    <MESSAGE value="lesson_3" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson_3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="281" key="#Notifications" timestamp="1601160003925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="449" y="281" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1601160003925" />
-    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601022922667">
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601411962643">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1601022922667" />
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1601411962643" />
     <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601022545879">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1601022545879" />
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601146305268">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601403615511">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1601146305268" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1601136290492">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1601403615511" />
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1601415045431">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1601136290492" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1601136290491">
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1601415045430" />
+    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1601415045426">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1601136290491" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1601136290490">
+    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1601415045426" />
+    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1601415045424">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1601136290490" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1601136290492">
+    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1601415045424" />
+    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1601415045429">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1601136290492" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1600898221025">
+    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1601415045429" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1601415045435">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600898221025" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1600898221025">
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1601415045435" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1601415045433">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1600898221025" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1600898221024">
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1601415045433" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1601415045432">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1600898221024" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1600898221025">
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1601415045432" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1601415045434">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1600898221025" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1601415045434" />
     <state width="221" height="457" key="HiddenNamespacesPopup" timestamp="1600982308047">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="221" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1600982308047" />
-    <state x="229" y="89" key="SettingsEditor" timestamp="1601196186036">
+    <state x="229" y="89" key="SettingsEditor" timestamp="1601321341084">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1601196186036" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1600887342980">
+    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1601321341084" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1601321065443">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1600887342980" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1601321065443" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -312,6 +499,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="566" y="344" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog/0.0.1440.900@0.0.1440.900" timestamp="1601021907050" />
+    <state x="525" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601321007428">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="525" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1601321007428" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1600790183195">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -319,6 +510,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/geekshop$upload.coverage" NAME="upload Coverage Results" MODIFIED="1601060867578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/upload" />
+    <SUITE FILE_PATH="coverage/geekshop$forms.coverage" NAME="forms Coverage Results" MODIFIED="1601414965497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/authapp" />
     <SUITE FILE_PATH="coverage/geekshop$views.coverage" NAME="views Coverage Results" MODIFIED="1600886852659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mainapp" />
   </component>
 </project>

@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render
 import json, os
 from mainapp.models import Game, GameTypes
@@ -5,8 +6,8 @@ from mainapp.models import Game, GameTypes
 
 # Create your views here.
 
-
-JSON_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, 'static'))
+JSON_DIR = os.path.join(settings.BASE_DIR, 'mainapp/json')
+#JSON_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, 'static'))
 with open(os.path.join(JSON_DIR, 'links_menu.json'), 'r') as file:
     temp_data = json.load(file)
     links_menu = temp_data["links"]

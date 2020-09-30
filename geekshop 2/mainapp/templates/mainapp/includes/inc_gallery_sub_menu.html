@@ -1,7 +1,0 @@
-<ul class="sub-menu clearfix">
-    {% for type in game_types %}
-        <li class="sub-menu-list">
-            <a href="{% url 'gallery:gametypes' type.pk %}" class="sub-menu-link">{{ type.name }}</a>
-        </li>
-    {% endfor %}
-</ul>

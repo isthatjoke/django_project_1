@@ -28,3 +28,5 @@ class Game(models.Model):
         return f'{self.name} {self.type.name}'
 
 
+class Router(models.Model):
+    specifications = models.FileField(upload_to='router_specifications')

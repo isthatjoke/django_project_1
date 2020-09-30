@@ -3,46 +3,52 @@
     {% for item in links_menu %}
         <li class="menu-list">
             <a href="{% url item.href %}"
-                                 {% if request.resolver_match.url_name == item.name %}class="menu-link active"
-
+                                 {% if request.resolver_match.url_name == item.name %}class="menu-link"
                                  {% else %}class="menu-link"{% endif %}>
                 {{ item.name|title }}
             </a></li>
-    {% endfor %}
+            {% endfor %}
+{% if user.is_authenticated %}
+        <li class="menu-list">
+            <a href="{% url 'auth:edit' %}" class="menu-link">
+                {{ user.first_name|default:'User' }}
+            </a>
+        </li>
+        {% endif %}
+        <li class="menu-list">
+            {% if user.is_authenticated %}
+              <a href="{% url 'auth:logout' %}" class="menu-link">Sign out</a>
+            {% else %}
+              <a href="{% url 'auth:login' %}" class="menu-link">Sigh in</a>
+            {% endif %}
+        </li>
+        <li class="menu-list">
+            {% if not user.is_authenticated %}
+              <a href="{% url 'auth:register' %}" class="menu-link">Sign up!</a>
+            {% endif %}
+        </li>
 </ul>
+
+
 <div class="broke-line">
     <img class="img-broke-line" src="{% static 'img/figure_1_1.png' %}" alt="broke-line">
 </div>
 <div class="menu-bottom-border">
 
-<img {% if request.resolver_match.url_name == 'main' %}
-    class="img-bottom-border-main"
+<img
+        {% if not request.resolver_match.url_name == 'index' %}
+    class="img-bottom-border-{{ request.resolver_match.url_name }}"
     src="{% static 'img/square_3_1.png' %}" alt="bottom-border"
-    {% endif %}>
-
-<img {% if request.resolver_match.url_name == 'about' %}
-    class="img-bottom-border-about"
-    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
-
-<img {% if request.resolver_match.url_name == 'services' %}
-    class="img-bottom-border-services"
-    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
+    {% endif %}
+    >
 {% for name in request.resolver_match.namespaces %}
 <img {% if name == 'gallery' %}
     class="img-bottom-border-gallery"
-    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
+    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"
+{% endif %}>
+
 {% endfor%}
-<img {% if request.resolver_match.url_name == 'news' %}
-    class="img-bottom-border-news"
-    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
 
-<img {% if request.resolver_match.url_name == 'team' %}
-    class="img-bottom-border-team"
-    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
-
-<img {% if request.resolver_match.url_name == 'contacts' %}
-    class="img-bottom-border-contacts"
-    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"{% endif %}>
 
 </div>
 

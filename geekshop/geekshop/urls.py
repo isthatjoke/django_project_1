@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 import mainapp.views as mainapp
 from django.conf.urls.static import static
+import authapp
 
 
 urlpatterns = [
@@ -30,6 +31,7 @@ urlpatterns = [
     path('news/', mainapp.news, name='news'),
     path('team/', mainapp.team, name='team'),
     path('admin/', admin.site.urls, name='admin'),
+    path('auth/', include('authapp.urls', namespace='auth')),
 ]
 
 

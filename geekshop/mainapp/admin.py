@@ -1,13 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from mainapp.models import GameTypes, Game
+from mainapp.models import GameTypes, Game, Router
 
 admin.site.register(GameTypes)
 admin.site.register(Game)
-
-#class NewAdmin(admin.ModelAdmin):
- #   pass
-
-
-#admin.site.register(Author, AuthorAdmin)
+admin.site.register(Router)
