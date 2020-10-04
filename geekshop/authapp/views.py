@@ -7,7 +7,7 @@ from django.urls import reverse
 
 def login(request):
     title = 'login'
-
+    print(request.method)
     login_form = ShopUserLoginForm(data=request.POST)
     if request.method == 'POST' and login_form.is_valid():
         username = request.POST['username']

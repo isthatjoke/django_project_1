@@ -1,8 +1,6 @@
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from .models import ShopUser
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.forms import forms
-
 
 
 class ShopUserLoginForm(AuthenticationForm):
@@ -10,10 +8,10 @@ class ShopUserLoginForm(AuthenticationForm):
         model = ShopUser
         fields = ('username', 'password')
 
-    def __init__(self, *args, **kwargs):
-        super(ShopUserLoginForm, self).__init__(*args, **kwargs)
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'form-control'
+    # def __init__(self, *args, **kwargs):
+    #     super(ShopUserLoginForm, self).__init__(*args, **kwargs)
+    #     for field_name, field in self.fields.items():
+    #         field.widget.attrs['class'] = 'form-control'
 
 
 class ShopUserRegisterForm(UserCreationForm):

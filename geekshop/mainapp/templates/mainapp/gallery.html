@@ -28,7 +28,9 @@
                             <div class="short-description">{{ game.short_desc }}</div>
                             <div class="gallery-button">
                                 <div class="db-price">{{ game.price }} $</div>
-                                <button>Buy</button>
+                                <form action="{% url 'shopping_cartapp:add' game.pk %}">
+                                    <button type="submit" value="Buy">Buy</button>
+                                </form>
                             </div>
                         </div>
                     {% endfor %}

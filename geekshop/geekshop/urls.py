@@ -32,6 +32,7 @@ urlpatterns = [
     path('team/', mainapp.team, name='team'),
     path('admin/', admin.site.urls, name='admin'),
     path('auth/', include('authapp.urls', namespace='auth')),
+    path('shopping_cartapp/', include('shopping_cartapp.urls', namespace='shopping_cartapp')),
 ]
 
 

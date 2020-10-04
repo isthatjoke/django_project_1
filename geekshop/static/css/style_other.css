@@ -1472,10 +1472,21 @@ body {
 }
 
 .sub-active {
-    color: #ffffff;
-    letter-spacing: 0.36px;
+    color: #000000;
+    font-family: roboto-condensed, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 22.36px;
+    text-decoration: none;
+    padding-right: 25px;
+    text-shadow: 0 0 7px #7abaff;
 }
 
-.sub-menu-link:hover {
+.sub-menu-link:hover,
+.sub-active:hover {
     color: #ffffff;
+}
+
+.shopping-cart-content:hover {
+    cursor: default;
 }

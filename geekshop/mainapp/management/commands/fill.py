@@ -34,4 +34,4 @@ class Command(BaseCommand):
             new_game = Game(**game)
             new_game.save()
 
-        ShopUser.objects.create_superuser(username='django', password='geekbrains', age=33, email='')
+        #ShopUser.objects.create_superuser(username='django', password='geekbrains', age=33, email='')
