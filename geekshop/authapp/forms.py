@@ -4,14 +4,20 @@ from django.contrib.auth.forms import forms
 
 
 class ShopUserLoginForm(AuthenticationForm):
+    required_fields = ['username', 'password']
+
     class Meta:
         model = ShopUser
         fields = ('username', 'password')
 
-    # def __init__(self, *args, **kwargs):
-    #     super(ShopUserLoginForm, self).__init__(*args, **kwargs)
-    #     for field_name, field in self.fields.items():
-    #         field.widget.attrs['class'] = 'form-control'
+    def __init__(self, *args, **kwargs):
+        super(ShopUserLoginForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'
+            if field_name in self.required_fields:
+                field.help_text = '* required'
+            else:
+                field.help_text = ''
 
 
 class ShopUserRegisterForm(UserCreationForm):

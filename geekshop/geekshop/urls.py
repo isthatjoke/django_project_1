@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 import mainapp.views as mainapp
 from django.conf.urls.static import static
-import authapp
+
 
 
 urlpatterns = [
@@ -32,7 +32,7 @@ urlpatterns = [
     path('team/', mainapp.team, name='team'),
     path('admin/', admin.site.urls, name='admin'),
     path('auth/', include('authapp.urls', namespace='auth')),
-    path('shopping_cartapp/', include('shopping_cartapp.urls', namespace='shopping_cartapp')),
+    path('shopping_cartapp/', include('shopping_cartapp.urls', namespace='shopping_cart')),
 ]
 
 

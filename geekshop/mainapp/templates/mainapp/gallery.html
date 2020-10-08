@@ -22,7 +22,9 @@
             <div class="big-gallery">
                     {% for game in games %}
                         <div class="gallery clearfix">
-                            <img class="gallery-img" src="/media/{{ game.image }}" alt="{{ game.name }}">
+                            <a href="{% url 'gallery:game' game.pk %}" class="gallery-img">
+                                <img src="/media/{{ game.image }}" alt="{{ game.name }}">
+                            </a>
                             <div class="gallery-description">{{ game.description }}</div>
                             <div class="gallery-img-text">{{ game.name }}</div>
                             <div class="short-description">{{ game.short_desc }}</div>

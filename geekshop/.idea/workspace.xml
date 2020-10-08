@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -10,54 +13,39 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="lesson_4">
-      <change afterPath="$PROJECT_DIR$/media/games_images/tomb_raider_pcBwByo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/migrations/0002_auto_20201001_2044.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/shopping_cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/brands.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/fontawesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/solid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4bc3e66-ce16-4f77-84a7-e36d372c0e3a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a4bc3e66-ce16-4f77-84a7-e36d372c0e3a.xml" afterDir="false" />
+    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="lesson_5">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2ccac190-cb97-42f6-88ab-1c251ec4633d.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/good_old.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_head.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_main_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_shopping_cart_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/errorlist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-3.5.1.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/shopping_cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/management/commands/fill.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/management/commands/fill.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_gallery_sub_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_gallery_sub_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/good.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/good.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_head.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cartapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/shopping_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/shopping_cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cartapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cartapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style_other.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style_other.css" afterDir="false" />
     </list>
@@ -73,8 +61,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -108,7 +96,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="lesson_4" />
+        <entry key="$PROJECT_DIR$/.." value="lesson_5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -124,8 +112,9 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -133,9 +122,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/mainapp/json" />
@@ -263,7 +255,10 @@
       <workItem from="1601320847886" duration="507000" />
       <workItem from="1601321385042" duration="8645000" />
       <workItem from="1601402573438" duration="927000" />
-      <workItem from="1601403623190" duration="52162000" />
+      <workItem from="1601403623190" duration="65218000" />
+      <workItem from="1601999855707" duration="9856000" />
+      <workItem from="1602012758871" duration="1295000" />
+      <workItem from="1602014132823" duration="14843000" />
     </task>
     <task id="LOCAL-00001" summary="first_commit">
       <created>1600511382327</created>
@@ -300,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601497259360</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lesson_5">
+      <created>1601842884892</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601842884893</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,17 +326,19 @@
     <MESSAGE value="lesson_2" />
     <MESSAGE value="lesson_3" />
     <MESSAGE value="lesson_4" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson_4" />
+    <MESSAGE value="lesson_5" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson_5" />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="281" key="#Notifications" timestamp="1601160003925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="449" y="281" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1601160003925" />
-    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601411962643">
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602012795221">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1601411962643" />
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1601999991292" />
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1602012795221" />
     <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601022545879">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -343,50 +347,52 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1601403615511" />
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1601415045431">
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1601999645701">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1601415045430" />
-    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1601415045426">
+    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1601999645701" />
+    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1601999645700">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1601415045426" />
-    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1601415045424">
+    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1601999645700" />
+    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1601999645699">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1601415045424" />
-    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1601415045429">
+    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1601999645699" />
+    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1601999645700">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1601415045429" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1601415045435">
+    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1601999645700" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1601999645704">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1601415045435" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1601415045433">
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1601999645704" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1601999645702">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1601415045433" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1601415045432">
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1601999645702" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1601999645702">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1601415045432" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1601415045434">
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1601999645702" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1601999645703">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1601415045434" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1601999645703" />
     <state width="221" height="457" key="HiddenNamespacesPopup" timestamp="1600982308047">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="221" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1600982308047" />
-    <state x="229" y="89" key="SettingsEditor" timestamp="1601321341084">
+    <state x="229" y="89" key="SettingsEditor" timestamp="1602081894467">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1601321341084" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1601497265196">
+    <state x="229" y="89" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1602081894467" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1601842887272">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1601497265196" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1601842887272" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -399,10 +405,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="525" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1601321007428" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1600790183195">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1601906284375">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1600790183195" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1601906284375" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/geekshop$upload.coverage" NAME="upload Coverage Results" MODIFIED="1601060867578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/upload" />

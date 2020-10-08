@@ -16,11 +16,12 @@ body {
     clear: both;
 }
 
-.container {
+.container-main {
     width: 1920px;
     margin: 0 auto;
-    height: 1456px;
-    background-image: url(../img/back_page.jpg)
+    height: 100%;
+    background-image: url(../img/back_page.jpg);
+    position: relative;
 }
 
 .hello-part {
@@ -209,6 +210,10 @@ body {
     color: #ffffff;
 }
 
+.shopping-cart-content:hover {
+    cursor: default;
+}
+
 .img-broke-line {
     border: 1px solid #ffffff;
     position: absolute;
@@ -295,6 +300,16 @@ body {
     height: 3px;
     top: 173px;
     left: 1130px;
+    z-index: 100;
+}
+
+.img-bottom-border-shopping-cart {
+    position: absolute;
+    background-color: #ffffff;
+    width: 57px;
+    height: 3px;
+    top: 173px;
+    left: 1350px;
     z-index: 100;
 }
 
@@ -766,8 +781,8 @@ body {
 }
 
 .big-img {
-    width: 470px;
-    height: 257px;
+    width: 320px;
+    height: 420px;
     position: absolute;
     top: 175px;
     left: 477px;
@@ -1033,11 +1048,12 @@ body {
     width: 270px;
     height: 230px;
     position: absolute;
-    z-index: 100;
+    z-index: 1000;
     background-color: white;
     opacity: 70%;
     pointer-events: none;
     text-align: center;
+    font-size: 12px;
 }
 
 .gallery-img:hover {
@@ -1219,7 +1235,7 @@ body {
 
 .gallery-price {
     color: #000000;
-    font-size: 62px;
+    font-size: 56px;
     float: left;
 }
 
@@ -1426,9 +1442,11 @@ body {
 /*footer*/
 
 .footer {
+    position: relative;
+	bottom: 0;
+	width: 1920px;
     height: 71px;
     background-color: #000000;
-    position: relative;
 }
 
 .footer-text {
@@ -1487,6 +1505,66 @@ body {
     color: #ffffff;
 }
 
-.shopping-cart-content:hover {
-    cursor: default;
+
+
+/*shopping-cart*/
+
+.shopping-cart {
+    width: 1920px;
+    height: 380px;
+    position: relative;
+    top: 10px;
+    margin-bottom: 10px;
+    background-color: #f7f7f7;
+}
+
+.sc-img {
+    width: 280px;
+    height: 380px;
+    float: left;
+    position: relative;
+    left: 10px;
+}
+
+.sc-type-name {
+    top: 180px;
+    position: absolute;
+    left: 340px;
+}
+
+.sc-game-name {
+    position: absolute;
+    top: 180px;
+    left: 550px;
+}
+
+.sc-game-price {
+    position: absolute;
+    top: 180px;
+    left: 900px;
+}
+
+.sc-input input{
+    position: absolute;
+    top: 180px;
+    left: 1200px;
+    width: 50px;
+}
+
+.sc-total-cost {
+    position: absolute;
+    top: 180px;
+    left: 1300px;
+}
+
+.btn {
+    position: absolute;
+    top: 175px;
+    left: 1400px;
+}
+
+.sc-summary p{
+    font-size: 20px;
+    text-align: right;
+    padding-right: 20px;
 }

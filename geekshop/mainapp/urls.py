@@ -7,5 +7,6 @@ app_name = 'mainapp'
 
 urlpatterns = [
     path('', mainapp.gallery, name='index'),
-    path('<types_pk>/', mainapp.gallery, name='gametypes'),
+    path('gametypes/<types_pk>/', mainapp.gallery, name='gametypes'),
+    path('game/<int:pk>', mainapp.good, name='game'),
 ]

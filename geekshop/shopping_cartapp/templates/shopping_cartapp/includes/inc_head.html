@@ -2,9 +2,9 @@
 <meta charset="UTF-8">
 <title>{{ title|title }}
 </title>
-<script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
-<link rel="stylesheet" {% if request.resolver_match.url_name == 'main' %}href="{% static 'css/style.css' %}"
-{% else %}href="{% static 'css/style_other.css' %}"{% endif %}>
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'js/shopping_cart.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/style_other.css' %}">
 <link rel="stylesheet" href="{% static 'css/solid.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/brands.min.css' %}">

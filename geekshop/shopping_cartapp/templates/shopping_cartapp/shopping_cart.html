@@ -1,10 +1,19 @@
+{% extends 'shopping_cartapp/base.html' %}
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+
+
+
+
+
 <body>
+{% block content %}
+<div class="shopping-cart-list">
+{% include 'shopping_cartapp/includes/inc_shopping_cart_list.html' %}
+</div>
+        {% endblock %}
 
 </body>
+
 </html>

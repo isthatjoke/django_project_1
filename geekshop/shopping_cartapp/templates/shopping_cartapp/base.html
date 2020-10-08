@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+    {% include 'shopping_cartapp/includes/inc_head.html' %}
+</head>
+
+<body>
+
+    <div class="container-main">
+        {% block hello-part %}
+        <div class="hello-part">
+            <div class="header clearfix">
+                <div class="header-line">
+                    <a href="{% url 'main' %}" class="logo clearfix">
+                        <p class="historical">Historical</p>
+                        <p class="games">GAMES</p>
+                    </a>
+                    <div class="phone clearfix">
+                        <img class="phone-icon" src="{% static 'img/phone.jpg' %}" alt="phone-icon">
+                        <div class="phone-text">+123 456 7890</div>
+                    </div>
+                    <div class="email clearfix">
+                        <img src="{% static 'img/email.jpg' %}" alt="email-icon" class="email-icon">
+                        <div class="email-text">info@example.com</div>
+                    </div>
+                    <div class="search clearfix">
+                        <img src="{% static 'img/square_2.svg' %}" alt="search">
+                        <img class="vert-border" src="{% static 'img/figure_2.svg' %}" alt="vert-border">
+                        <form action="#">
+                            <input class="search-input" type="search" placeholder="Search">
+                            <input class="search-icon" type="submit" value="">
+                        </form>
+                    </div>
+
+
+                </div>
+
+            {% block menu %}
+            {% include 'shopping_cartapp/includes/inc_main_menu.html' %}
+            {% endblock %}
+        {% endblock %}
+        </div>
+        </div>
+        {% block content %}
+
+        {% endblock %}
+{% block footer %}
+        <div class="footer">
+            <p class="footer-text">© {% now 'Y' %} Hystorical Games. Test web-site <a href="https://geekbrains.ru">geekbrains'</a> student</p>
+        </div>
+        {% endblock %}
+    </div>
+
+
+</body>
+
+</html>

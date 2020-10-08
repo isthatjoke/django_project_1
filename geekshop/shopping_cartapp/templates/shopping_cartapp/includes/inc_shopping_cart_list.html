@@ -1,0 +1,36 @@
+
+{% for item in shopping_cart_items %}
+                <div class="shopping-cart">
+            <div class="sc-img">
+                <a href="{% url 'gallery:game' item.product_id %}"><img src="/media/{{ item.product.image }}" alt="game-image"></a>
+
+                </div>
+               <span class="sc-type-name">{{ item.product.type.name }}
+               </span>
+                    <span class="sc-game-name">{{ item.product.name }}</span>
+                    <span class="sc-game-price">{{ item.product.price }} $</span>
+                <div class="sc-input">
+                <input type="number" name="{{ item.pk }}"
+                           min="0"
+                       value="{{ item.quantity }}">
+                </div>
+                    <span class="sc-total-cost">{{ item.product_cost }} $</span>
+
+                <button class="btn btn-round">
+        <a href="{% url 'shopping_cart:remove' item.pk %}" class="">
+            <i class="fas fa-trash-alt"></i>
+        </a>
+      </button>
+
+
+</div>
+        {% endfor %}
+
+    {% if shopping_cart_items %}
+<div class="sc-summary">
+<p>
+Total items: {{ shopping_cart_items.0.total_quantity }},
+Total price: {{ shopping_cart_items.0.total_cost }} $.
+</p>
+</div>
+{% endif %}

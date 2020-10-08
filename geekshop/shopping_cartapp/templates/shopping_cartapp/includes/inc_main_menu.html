@@ -45,26 +45,9 @@
 <div class="menu-bottom-border">
 
 <img
-        {% if request.resolver_match.url_name != 'index' and request.resolver_match.url_name != 'gametypes' and request.resolver_match.url_name != 'game' %}
-    class="img-bottom-border-{{ request.resolver_match.url_name }}"
-    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"
-    {% endif %}
-    >
-{% for name in request.resolver_match.namespaces %}
-<img {% if name == 'gallery' %}
-    class="img-bottom-border-gallery"
-    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"
-{% endif %}>
+    class="img-bottom-border-shopping-cart"
+    src="{% static 'img/square_3_1.png' %}" alt="bottom-border">
 
-{% endfor%}
-
-{% for name in request.resolver_match.namespaces %}
-<img {% if name == 'gametypes' %}
-    class="img-bottom-border-gallery"
-    src="{% static 'img/square_3_1.png' %}" alt="bottom-border"
-{% endif %}>
-
-{% endfor%}
 
 
 </div>

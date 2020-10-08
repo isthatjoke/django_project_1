@@ -11,3 +11,19 @@ class ShoppingCart(models.Model):
     quantity = models.SmallIntegerField(verbose_name="quantity", default=0)
     add_time = models.DateTimeField(verbose_name="add time", auto_now_add=True)
 
+    @property
+    def product_cost(self):
+        return self.product.price * self.quantity
+
+    @property
+    def total_quantity(self):
+        _items = ShoppingCart.objects.filter(user=self.user)
+        _total_quantity = sum(list(map(lambda x: x.quantity, _items)))
+        return _total_quantity
+
+    @property
+    def total_cost(self):
+        _items = ShoppingCart.objects.filter(user=self.user)
+        _total_cost = sum(list(map(lambda x: x.product_cost, _items)))
+        return _total_cost
+
