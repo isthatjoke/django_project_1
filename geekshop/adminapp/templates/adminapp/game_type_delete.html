@@ -1,0 +1,47 @@
+{% extends 'adminapp/base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center">
+                Do you really wanna to delete this game?
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="text-center">
+            {{ game_type_to_delete.name}}
+            </p>
+         {% if game_type_to_delete.description %}
+            <p class="text-center">
+            {{ game_type_to_delete.description }}
+            </p>
+        {% endif %}
+        </div>
+    </div>
+    </div>
+
+
+<div class="container mb-3">
+<div class="row">
+    <div class="col text-center">
+        <form class="form-group" action="{% url 'admin:game_type_delete' game_type_to_delete.pk %}" method="post">
+            {% csrf_token %}
+            <input class="btn btn-danger" type="submit" value="delete">
+        </form>
+    </div>
+</div>
+</div>
+
+    <div class="container">
+    <div class="row">
+    <div class="col text-center">
+            <a href="{% url 'admin:game_types' %}" class="btn btn-success">
+                back to game types
+            </a>
+        </div>
+{% endblock %}

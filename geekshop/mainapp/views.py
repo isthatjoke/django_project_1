@@ -47,11 +47,11 @@ def contacts(request):
 def gallery(request, types_pk=None):
 
     title = 'gallery'
-    game_types = GameTypes.objects.all()
+    game_types = GameTypes.objects.all().exclude(is_active=False)
 
     if types_pk is not None:
         if types_pk == '0':
-            games = list(Game.objects.all())[:8]
+            games = list(Game.objects.all().exclude(is_active=False))[:8]
 
         else:
             types = get_object_or_404(GameTypes, pk=types_pk)
@@ -67,7 +67,7 @@ def gallery(request, types_pk=None):
 
         return render(request, 'mainapp/gallery.html', content)
 
-    shown_games = list(Game.objects.all())[:8]
+    shown_games = list(Game.objects.all().exclude(is_active=False))[:8]
     content = {
         'links_menu': links_menu,
         'games': shown_games,

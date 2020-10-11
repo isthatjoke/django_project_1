@@ -30,8 +30,9 @@
                             <div class="short-description">{{ game.short_desc }}</div>
                             <div class="gallery-button">
                                 <div class="db-price">{{ game.price }} $</div>
-                                <form action="{% url 'shopping_cartapp:add' game.pk %}">
+                                <form action="{% url 'shopping_cartapp:add' game.pk %}" method="get">
                                     <button type="submit" value="Buy">Buy</button>
+                                    <input type="hidden" name="scroll" value="">
                                 </form>
                             </div>
                         </div>

@@ -3,6 +3,7 @@
 <title>{{ title|title }}
 </title>
 <script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
+<script src="{% static 'js/scroll.js' %}"></script>
 <link rel="stylesheet" {% if request.resolver_match.url_name == 'main' %}href="{% static 'css/style.css' %}"
 {% else %}href="{% static 'css/style_other.css' %}"{% endif %}>
 <link rel="stylesheet" href="{% static 'css/solid.min.css' %}">
@@ -13,4 +14,4 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.typekit.net/pen6rnr.css">
-<link rel="stylesheet" href="https://use.typekit.net/pen6rnr.css">
+

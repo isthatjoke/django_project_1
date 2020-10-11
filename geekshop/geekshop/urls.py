@@ -30,9 +30,10 @@ urlpatterns = [
     path('services/', mainapp.services, name='services'),
     path('news/', mainapp.news, name='news'),
     path('team/', mainapp.team, name='team'),
-    path('admin/', admin.site.urls, name='admin'),
+    #path('admin/', admin.site.urls, name='admin'),
     path('auth/', include('authapp.urls', namespace='auth')),
     path('shopping_cartapp/', include('shopping_cartapp.urls', namespace='shopping_cart')),
+    path('admin/', include('adminapp.urls', namespace='admin')),
 ]
 
 

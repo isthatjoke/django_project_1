@@ -8,13 +8,20 @@
                 {{ item.name|title }}
             </a></li>
             {% endfor %}
-{% if user.is_authenticated %}
+    {% if user.is_authenticated %}
         <li class="menu-list">
             <a href="{% url 'auth:edit' %}" class="menu-link">
                 {{ user.first_name|title|default:'User' }}
             </a>
         </li>
-        {% endif %}
+    {% endif %}
+    {% if user.is_superuser %}
+        <li class="menu-list">
+            <a href="{% url 'admin:admin' %}" class="menu-link">
+                Admin
+            </a>
+        </li>
+    {% endif %}
         <li class="menu-list">
             {% if user.is_authenticated %}
               <a href="{% url 'auth:logout' %}" class="menu-link">Sign out</a>

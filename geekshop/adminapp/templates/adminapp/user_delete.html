@@ -1,0 +1,54 @@
+{% extends 'adminapp/base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+        <div class="container mb-5">
+    <div class="row mb-5">
+        <div class="col">
+            <h1 class="text-center">
+                Do you really wanna to delete this user?
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+        {% if user_to_delete.first_name %}
+            <p class="text-center">
+            {{ user_to_delete.first_name}}
+            </p>
+        {% endif %}
+
+         {% if user_to_delete.last_name %}
+            <p class="text-center">
+            {{ user_to_delete.last_name }}
+            </p>
+        {% endif %}
+        </div>
+    </div>
+    </div>
+
+
+
+<div class="container mb-3">
+<div class="row">
+    <div class="col text-center">
+        <form class="form-group" action="{% url 'admin:user_delete' user_to_delete.pk %}" method="post">
+            {% csrf_token %}
+            <input class="btn btn-danger" type="submit" value="delete">
+        </form>
+    </div>
+</div>
+</div>
+
+    <div class="container">
+    <div class="row">
+    <div class="col text-center">
+            <a href="{% url 'admin:users' %}" class="btn btn-success">
+                back to users
+            </a>
+        </div>
+</div>
+</div>
+{% endblock %}

@@ -13,40 +13,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="lesson_5">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2ccac190-cb97-42f6-88ab-1c251ec4633d.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/good_old.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_main_menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_shopping_cart_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/errorlist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery-3.5.1.slim.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/shopping_cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="lesson_6">
+      <change afterPath="$PROJECT_DIR$/static/js/scroll.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authapp/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/good.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/good.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_head.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/shopping_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/shopping_cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cartapp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cartapp/migrations/0002_auto_20201001_2044.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_head.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_main_menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style_other.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style_other.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,8 +44,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -96,7 +79,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="lesson_5" />
+        <entry key="$PROJECT_DIR$/.." value="lesson_6" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -114,7 +97,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -125,15 +108,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/adminapp/templates/adminapp" />
+      <recent name="$PROJECT_DIR$/adminapp/templates" />
       <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/mainapp/json" />
       <recent name="$PROJECT_DIR$/authapp" />
-      <recent name="$PROJECT_DIR$/mainapp" />
-      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes" />
     </key>
   </component>
   <component name="RunManager" selected="Python.forms">
@@ -258,7 +241,9 @@
       <workItem from="1601403623190" duration="65218000" />
       <workItem from="1601999855707" duration="9856000" />
       <workItem from="1602012758871" duration="1295000" />
-      <workItem from="1602014132823" duration="14843000" />
+      <workItem from="1602014132823" duration="16728000" />
+      <workItem from="1602161159677" duration="3084000" />
+      <workItem from="1602243458608" duration="47084000" />
     </task>
     <task id="LOCAL-00001" summary="first_commit">
       <created>1600511382327</created>
@@ -302,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601842884893</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lesson_6">
+      <created>1602144155867</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602144155867</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +319,8 @@
     <MESSAGE value="lesson_3" />
     <MESSAGE value="lesson_4" />
     <MESSAGE value="lesson_5" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson_5" />
+    <MESSAGE value="lesson_6" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson_6" />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="281" key="#Notifications" timestamp="1601160003925">
@@ -343,10 +336,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1601022545879" />
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601403615511">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602264682516">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1601403615511" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1602264682516" />
     <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1601999645701">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -388,11 +382,11 @@
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1601321341084" />
     <state x="229" y="89" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1602081894467" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1601842887272">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1602144160776">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1601497265196" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1601842887272" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1602144160776" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -405,11 +399,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="525" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1601321007428" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1601906284375">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1602352890790">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1600790183195" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1601906284375" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1602352890790" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/geekshop$upload.coverage" NAME="upload Coverage Results" MODIFIED="1601060867578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/upload" />
