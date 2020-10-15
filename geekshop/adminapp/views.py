@@ -1,11 +1,10 @@
 from django.contrib.auth.decorators import user_passes_test
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
-
-# Create your views here.
-from django.urls import reverse
-
-from adminapp.forms import ShopUserAdminEditForm, GameTypeEditForm, GameEditForm
+from django.urls import reverse, reverse_lazy
+from django.utils.decorators import method_decorator
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from adminapp.forms import GameTypeEditForm, GameEditForm, ShopUserAdminEditForm
 from authapp.forms import ShopUserRegisterForm
 from authapp.models import ShopUser
 from mainapp.models import GameTypes, Game
@@ -22,6 +21,306 @@ def admin(request):
     return render(request, 'adminapp/admin.html', content)
 
 
+class UserListView(ListView):
+    queryset = ShopUser.objects.all().order_by('-is_active')
+    template_name = 'adminapp/users.html'
+    # ordering = ['-is_active']
+    paginate_by = 3
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'users'
+        return context
+
+
+class UserCreateView(CreateView):
+    model = ShopUser
+    template_name = 'adminapp/user_edit.html'
+    success_url = reverse_lazy('admin:users')
+    form_class = ShopUserRegisterForm
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'create user'
+        return context
+
+
+class UserUpdateView(UpdateView):
+    model = ShopUser
+    template_name = 'adminapp/user_edit.html'
+    success_url = reverse_lazy('admin:users')
+    form_class = ShopUserAdminEditForm
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'update user'
+        return context
+
+
+class UserDeleteView(DeleteView):
+    model = ShopUser
+    template_name = 'adminapp/user_delete.html'
+    success_url = reverse_lazy('admin:users')
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'delete user'
+        return context
+
+    def get_template_names(self):
+        names = super().get_template_names()
+        print(names)
+        return names
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.is_active:
+            self.object.is_active = False
+        else:
+            self.object.is_active = True
+        self.object.save()
+
+        return HttpResponseRedirect(self.get_success_url())
+
+
+class GameTypesView(ListView):
+    model = GameTypes
+    template_name = 'adminapp/game_types.html'
+    ordering = ['-is_active']
+
+    @method_decorator(user_passes_test((lambda u: u.is_superuser)))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'game types'
+        return context
+
+
+class GameTypeCreateView(CreateView):
+    model = GameTypes
+    template_name = 'adminapp/game_type_edit.html'
+    success_url = reverse_lazy('admin:game_types')
+    form_class = GameTypeEditForm
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'create game type'
+        return context
+
+
+class GameTypeUpdateView(UpdateView):
+    model = GameTypes
+    template_name = 'adminapp/game_type_edit.html'
+    success_url = reverse_lazy('admin:game_types')
+    form_class = GameTypeEditForm
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'update game type'
+        return context
+
+
+class GameTypeDeleteView(DeleteView):
+    model = GameTypes
+    template_name = 'adminapp/game_type_delete.html'
+    success_url = reverse_lazy('admin:game_types')
+
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'delete game type'
+        return context
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.is_active:
+            self.object.is_active = False
+        else:
+            self.object.is_active = True
+        self.object.save()
+
+        return HttpResponseRedirect(self.get_success_url())
+
+
+class GamesView(ListView):
+    model = Game
+    template_name = 'adminapp/games.html'
+    ordering = ['-is_active']
+
+    @method_decorator(user_passes_test((lambda u: u.is_superuser)))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'games'
+        return context
+
+    def game_type(self):
+        game_type = self.kwargs.get('pk', None)
+        return game_type
+
+    def get_queryset(self):
+        type = self.kwargs.get('pk', None)
+        if type is not None:
+            games = Game.objects.filter(type_id=type)
+            return games
+        return Game.objects.all()
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def game(request, pk):
+    title = 'game'
+    _game = Game.objects.filter(pk=pk)
+    content = {
+        'title': title,
+        'game': _game,
+    }
+    return render(request, 'adminapp/game.html', content)
+
+
+class GameCreateFromTypeView(CreateView): #TODO
+    model = Game
+    template_name = 'adminapp/game_edit.html'
+    success_url = reverse_lazy('admin:game_types')
+    form_class = GameEditForm
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # type = self.kwargs.get('game_type', None)
+        print(self.kwargs.get)
+        context['title'] = 'game create'
+        context['form']['type'].initial = type
+        print(context['form']['type'])
+        print(context)
+        return context
+
+
+# @user_passes_test(lambda u: u.is_superuser)
+# def game_create_from_type(request, pk):
+#     title = 'game create'
+#     game_type = get_object_or_404(GameTypes, pk=pk)
+#     print(game_type.id)
+#     if request.method == 'POST':
+#         edit_form = GameEditForm(request.POST, request.FILES, initial={'type': game_type.id})
+#         if edit_form.is_valid():
+#             edit_form.save()
+#             return HttpResponseRedirect(reverse('admin:game_edit'))
+#     else:
+#         edit_form = GameEditForm(initial={'type': game_type.id})
+#
+#     content = {
+#         'title': title,
+#         'update_form': edit_form,
+#         'game_type': game_type.id
+#     }
+#     return render(request, 'adminapp/game_edit.html', content)
+
+
+class GameCreateView(CreateView):
+    model = Game
+    template_name = 'adminapp/game_edit.html'
+    success_url = reverse_lazy('admin:game_types')
+    form_class = GameEditForm
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'game create'
+        context['form']['type'].initial = 4
+        print(context['form']['type'])
+        print(context)
+        return context
+
+
+class GameUpdateView(UpdateView):
+    model = Game
+    template_name = 'adminapp/game_edit.html'
+    success_url = reverse_lazy('admin:game_types')
+    form_class = GameEditForm
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'game update'
+        return context
+
+
+class GameDeleteView(DeleteView):
+    model = Game
+    template_name = 'adminapp/game_delete.html'
+    success_url = reverse_lazy('admin:game_types')
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'delete game'
+        return context
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.is_active:
+            self.object.is_active = False
+        else:
+            self.object.is_active = True
+        self.object.save()
+
+        return HttpResponseRedirect(self.get_success_url())
+
+
+
+
+
+
+
+
+
+
+
+"""
 @user_passes_test(lambda u: u.is_superuser)
 def users(request):
     title = 'users'
@@ -50,8 +349,8 @@ def user_create(request):
         'update_form': user_form,
     }
     return render(request, 'adminapp/user_edit.html', content)
-
-
+    
+    
 @user_passes_test(lambda u: u.is_superuser)
 def user_edit(request, pk):
     title = 'user edit'
@@ -88,6 +387,17 @@ def user_delete(request, pk):
 
 
 @user_passes_test(lambda u: u.is_superuser)
+def game_types(request):
+    title = 'game types'
+    _game_types = GameTypes.objects.all().order_by('-is_active')
+    content = {
+        'title': title,
+        'game_types': _game_types,
+    }
+    return render(request, 'adminapp/game_types.html', content)
+
+
+@user_passes_test(lambda u: u.is_superuser)
 def game_type_create(request):
     title = 'game type create'
     if request.method == 'POST':
@@ -103,20 +413,9 @@ def game_type_create(request):
         'update_form': edit_form,
     }
     return render(request, 'adminapp/game_type_edit.html', content)
-
-
-@user_passes_test(lambda u: u.is_superuser)
-def game_types(request):
-    title = 'game types'
-    _game_types = GameTypes.objects.all().order_by('-is_active')
-    content = {
-        'title': title,
-        'game_types': _game_types,
-    }
-    return render(request, 'adminapp/game_types.html', content)
-
-
-@user_passes_test(lambda u: u.is_superuser)
+    
+    
+    @user_passes_test(lambda u: u.is_superuser)
 def game_type_edit(request, pk):
     title = 'game type edit'
     game_type_edit = get_object_or_404(GameTypes, pk=pk)
@@ -133,8 +432,8 @@ def game_type_edit(request, pk):
         'update_form': edit_form,
     }
     return render(request, 'adminapp/game_type_edit.html', content)
-
-
+    
+    
 @user_passes_test(lambda u: u.is_superuser)
 def game_type_delete(request, pk):
     title = 'game type delete'
@@ -149,51 +448,6 @@ def game_type_delete(request, pk):
     }
 
     return render(request, 'adminapp/game_type_delete.html', content)
-
-
-@user_passes_test(lambda u: u.is_superuser)
-def games(request, pk):
-    title = 'games'
-    game_type = get_object_or_404(GameTypes, pk=pk)
-    _games = Game.objects.filter(type__pk=pk).order_by('-is_active')
-    content = {
-        'title': title,
-        'games': _games,
-        'game_type': game_type,
-    }
-    return render(request, 'adminapp/games.html', content)
-
-
-@user_passes_test(lambda u: u.is_superuser)
-def game(request, pk):
-    title = 'game'
-    _game = Game.objects.filter(pk=pk)
-    content = {
-        'title': title,
-        'game': _game,
-    }
-    return render(request, 'adminapp/game.html', content)
-
-
-@user_passes_test(lambda u: u.is_superuser)
-def game_create_from_type(request, pk):
-    title = 'game create'
-    game_type = get_object_or_404(GameTypes, pk=pk)
-    print(game_type.id)
-    if request.method == 'POST':
-        edit_form = GameEditForm(request.POST, request.FILES, initial={'type': game_type.id})
-        if edit_form.is_valid():
-            edit_form.save()
-            return HttpResponseRedirect(reverse('admin:game_edit'))
-    else:
-        edit_form = GameEditForm(initial={'type': game_type.id})
-
-    content = {
-        'title': title,
-        'update_form': edit_form,
-        'game_type': game_type.id
-    }
-    return render(request, 'adminapp/game_edit.html', content)
 
 
 @user_passes_test(lambda u: u.is_superuser)
@@ -212,25 +466,6 @@ def game_create(request):
         'update_form': edit_form,
     }
     return render(request, 'adminapp/game_edit.html', content)
-
-
-@user_passes_test(lambda u: u.is_superuser)
-def game_delete(request, pk):
-    title = 'game delete'
-    game = get_object_or_404(Game, pk=pk)
-    game_type = GameTypes.objects.filter(name=game.type).first()
-    _game_type = game_type.id
-    if request.method == 'POST':
-        game.is_active = False
-        game.save()
-        return HttpResponseRedirect(reverse('admin:game_edit', args=[game.pk]))
-    content = {
-        'title': title,
-        'game_to_delete': game,
-        'game_type': _game_type,
-    }
-
-    return render(request, 'adminapp/game_delete.html', content)
 
 
 @user_passes_test(lambda u: u.is_superuser)
@@ -255,6 +490,41 @@ def game_edit(request, pk):
     return render(request, 'adminapp/game_edit.html', content)
 
 
+    
+
+@user_passes_test(lambda u: u.is_superuser)
+def game_delete(request, pk):
+    title = 'game delete'
+    game = get_object_or_404(Game, pk=pk)
+    game_type = GameTypes.objects.filter(name=game.type).first()
+    _game_type = game_type.id
+    if request.method == 'POST':
+        game.is_active = False
+        game.save()
+        return HttpResponseRedirect(reverse('admin:game_edit', args=[game.pk]))
+    content = {
+        'title': title,
+        'game_to_delete': game,
+        'game_type': _game_type,
+    }
+
+    return render(request, 'adminapp/game_delete.html', content)
+
+
+# @user_passes_test(lambda u: u.is_superuser)
+# def games(request, pk):
+#     title = 'games'
+#     game_type = get_object_or_404(GameTypes, pk=pk)
+#     _games = Game.objects.filter(type__pk=pk).order_by('-is_active')
+#     content = {
+#         'title': title,
+#         'games': _games,
+#         'game_type': game_type,
+#     }
+#     return render(request, 'adminapp/games.html', content)
 
 
 
+
+
+"""

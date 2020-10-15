@@ -38,7 +38,7 @@
     </div>
 
 
-{% for type in game_types %}
+{% for type in object_list %}
     <div class="container mb-2 border border-primary"
     {% if type.is_active == False %}
                 style="opacity: 50%"
@@ -65,13 +65,17 @@
     <div class="row">
         <div class="col text-center">
             <p class="text-center">
-                <a href="{% url 'admin:game_type_edit' type.pk %}" class="btn btn-secondary" role="button">edit game type</a>
+                <a href="{% url 'admin:game_type_update' type.pk %}" class="btn btn-secondary" role="button">edit game type</a>
             </p>
         </div>
 
     <div class="col text-center">
            <p class="text-center">
+               {% if type.is_active == True %}
                 <a href="{% url 'admin:game_type_delete' type.pk %}" class="btn btn-danger" role="button">delete game type</a>
+               {% else %}
+               <a href="{% url 'admin:game_type_delete' type.pk %}" class="btn btn-danger" role="button">restore game type</a>
+               {% endif %}
             </p>
         </div>
     <div class="col">

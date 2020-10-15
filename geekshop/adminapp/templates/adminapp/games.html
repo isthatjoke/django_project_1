@@ -1,15 +1,17 @@
 {% extends 'adminapp/base.html' %}
 {% load staticfiles %}
-
+{% load my_tags %}
 {% block content %}
 
 
 <div class="container mb-5">
 <div class="row">
     <div class="col text-center">
-            <a href="{% url 'admin:game_create_from_type' game_type.pk%}" class="btn btn-info" role="button">
+
+            <a href="{% url 'admin:game_create_from_type' view.game_type %}" class="btn btn-info" role="button">
             create game
             </a>
+
         </div>
 </div>
 </div>
@@ -58,7 +60,7 @@
 
 
 
-        {% for game in games %}
+        {% for game in object_list %}
                 <div class="container mb-3 border border-primary"
                 {% if game.is_active == False %}
                 style="opacity: 50%"
@@ -91,7 +93,7 @@
             </div>
             <div class="col-3">
                 <p class="text-center">
-                    <a href="{% url 'mainapp:game' game.pk %}"><img src="/media/{{game.image}}" alt="game_image" style="cursor: pointer"></a>
+                    <a href="{% url 'mainapp:game' game.pk %}"><img src="{{game.image|media_folder_games}}" alt="game_image" style="cursor: pointer"></a>
                 </p>
             </div>
             <div class="col">
@@ -102,10 +104,14 @@
             </div>
     <div class="row mb-5">
         <div class="col-2 text-center">
-                <a href="{% url 'admin:game_edit' game.pk %}" class="btn btn-secondary" role="button">edit game</a>
+                <a href="{% url 'admin:game_update' game.pk %}" class="btn btn-secondary" role="button">edit game</a>
         </div>
         <div class="col-2 text-center">
+            {% if game.is_active == True %}
                 <a href="{% url 'admin:game_delete' game.pk %}" class="btn btn-danger" role="button">delete game</a>
+            {% else %}
+            <a href="{% url 'admin:game_delete' game.pk %}" class="btn btn-danger" role="button">restore game</a>
+            {% endif %}
         </div>
         <div class="col-8"></div>
         </div>

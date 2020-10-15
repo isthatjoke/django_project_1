@@ -7,18 +7,22 @@
     <div class="row">
         <div class="col">
             <h1 class="text-center">
+                {% if object.is_active == True %}
                 Do you really wanna to delete this game?
+                {% else %}
+                Do you really wanna to restore this game?
+                {% endif %}
             </h1>
         </div>
     </div>
     <div class="row">
         <div class="col">
             <p class="text-center">
-            {{ game_type_to_delete.name}}
+            {{ object.name}}
             </p>
-         {% if game_type_to_delete.description %}
+         {% if object.description %}
             <p class="text-center">
-            {{ game_type_to_delete.description }}
+            {{ object.description }}
             </p>
         {% endif %}
         </div>
@@ -29,10 +33,17 @@
 <div class="container mb-3">
 <div class="row">
     <div class="col text-center">
-        <form class="form-group" action="{% url 'admin:game_type_delete' game_type_to_delete.pk %}" method="post">
+        {% if object.is_active == True %}
+        <form class="form-group" action="{% url 'admin:game_type_delete' object.pk %}" method="post">
             {% csrf_token %}
             <input class="btn btn-danger" type="submit" value="delete">
         </form>
+        {% else %}
+        <form class="form-group" action="{% url 'admin:game_type_delete' object.pk %}" method="post">
+            {% csrf_token %}
+            <input class="btn btn-danger" type="submit" value="restore">
+        </form>
+        {% endif %}
     </div>
 </div>
 </div>
