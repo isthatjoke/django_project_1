@@ -6,7 +6,7 @@ import adminapp.views as adminapp
 app_name = 'adminapp'
 
 urlpatterns = [
-    path('', adminapp.admin, name='admin'),
+    path('', adminapp.AdminView.as_view(), name='admin'),
     path('users/', adminapp.UserListView.as_view(), name='users'),
     path('users/create/', adminapp.UserCreateView.as_view(), name='user_create'),
     path('users/edit/<int:pk>/', adminapp.UserUpdateView.as_view(), name='user_update'),
@@ -39,3 +39,4 @@ urlpatterns = [
 # path('games/delete/<int:pk>/', adminapp.game_delete, name='game_delete'),
 # path('games/gametypes/<int:pk>/', adminapp.games, name='games'),
 # path('games/create/gametypes/<int:pk>/', adminapp.game_create_from_type, name='game_create_from_type'),
+# path('', adminapp.admin, name='admin'),

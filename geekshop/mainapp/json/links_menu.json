@@ -1,11 +1,9 @@
 {
   "links":  [
-    {"href": "main", "name": "main", "class": "img-bottom-border-main"},
-    {"href": "about", "name": "about", "class": "img-bottom-border-about"},
-    {"href": "services", "name": "services", "class": "img-bottom-border-services"},
-    {"href": "gallery:index", "name": "gallery", "class": "img-bottom-border-gallery"},
-    {"href": "news", "name": "news", "class": "img-bottom-border-news"},
-    {"href": "team", "name": "team", "class": "img-bottom-border-team"},
-    {"href": "contacts", "name": "contacts", "class": "img-bottom-border-contacts"}
+    {"href": "main", "name": "main"},
+    {"href": "about", "name": "about"},
+    {"href": "services", "name": "services"},
+    {"href": "gallery:games", "name": "gallery"},
+    {"href": "contacts", "name": "contacts"}
   ]
 }

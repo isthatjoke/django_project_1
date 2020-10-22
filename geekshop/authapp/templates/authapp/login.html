@@ -1,8 +1,13 @@
 {% extends 'authapp/base.html' %}
-{% load staticfiles %}
+{% load static %}
 
 
 {% block content %}
+    <div class="container">
+    <div class="row">
+    <div class="col"></div>
+    <div class="col-6">
+    {% include 'authapp/includes/inc_body_head.html' %}
     <form class="form-group" action="{% url 'auth:login' %}" method="post">
         {% csrf_token %}
         {% if next %}
@@ -11,9 +16,13 @@
         {{ login_form.as_p }}
         <br>
         <input class="form-control" type="submit" value="sign in">
-        <a href="{% url 'main' %}" class="">
-            back to the main
-        </a>
     </form>
 
+    <a href="{% url 'main' %}" class="btn btn-primary" role="button">
+            back to the main
+        </a>
+</div>
+    <div class="col"></div>
+    </div>
+    </div>
 {% endblock %}

@@ -1,22 +1,25 @@
-<ul class="sub-menu clearfix">
-        <li class="sub-menu-list">
-            <a href="{% url 'gallery:gametypes' 0 %}"
-                    {% if request.resolver_match.kwargs.types_pk == '0' %}
-               class="sub-active"
-               {% else %}
-               class="sub-menu-link"
-               {% endif %}>all games</a>
-        </li>
-    {% for type in game_types %}
-        <li class="sub-menu-list">
-            <a href="{% url 'gallery:gametypes' type.pk %}"
-               {% if request.resolver_match.kwargs.types_pk == type.pk|stringformat:'d' %}
-               class="sub-active"
-               {% else %}
-               class="sub-menu-link"
-               {% endif %}>
-                {{ type.name }}
-               </a>
-        </li>
+
+
+
+<ul class="nav justify-content-center nav-pills nav-fill">
+    <li class="nav-item">
+    <a href="{% url 'mainapp:games' %}"
+    {% if title == 'gallery' %}
+            class="nav-link active"
+       {% else %}
+       class="nav-link"
+       {% endif %}
+    >all games</a>
+  </li>
+    {% for game_type in game_types %}
+  <li class="nav-item">
+    <a href="{% url 'mainapp:selected_games' game_type.pk %}"
+       {% if game_type.pk == gametype %}
+             class="nav-link active"
+       {% else %}
+             class="nav-link"
+       {% endif %}
+    >{{ game_type.name }}</a>
+  </li>
     {% endfor %}
 </ul>

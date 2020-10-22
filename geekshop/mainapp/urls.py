@@ -6,7 +6,8 @@ import mainapp.views as mainapp
 app_name = 'mainapp'
 
 urlpatterns = [
-    path('', mainapp.gallery, name='index'),
-    path('gametypes/<types_pk>/', mainapp.gallery, name='gametypes'),
+    # path('', mainapp.gallery, name='index'),
+    path('', mainapp.GamesAllView.as_view(), name='games'),
+    path('<int:pk>', mainapp.GamesView.as_view(), name='selected_games'),
     path('game/<int:pk>', mainapp.good, name='game'),
 ]

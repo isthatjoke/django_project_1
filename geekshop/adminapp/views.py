@@ -3,22 +3,24 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, TemplateView
 from adminapp.forms import GameTypeEditForm, GameEditForm, ShopUserAdminEditForm
 from authapp.forms import ShopUserRegisterForm
 from authapp.models import ShopUser
 from mainapp.models import GameTypes, Game
 
 
-@user_passes_test(lambda u: u.is_superuser)
-def admin(request):
-    title = 'admin'
+class AdminView(TemplateView):
+    template_name = 'adminapp/admin.html'
 
-    content = {
-        'title': title,
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
 
-    }
-    return render(request, 'adminapp/admin.html', content)
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'admin'
+        return context
 
 
 class UserListView(ListView):
@@ -209,7 +211,7 @@ def game(request, pk):
     return render(request, 'adminapp/game.html', content)
 
 
-class GameCreateFromTypeView(CreateView): #TODO
+class GameCreateFromTypeView(CreateView):
     model = Game
     template_name = 'adminapp/game_edit.html'
     success_url = reverse_lazy('admin:game_types')
@@ -221,34 +223,10 @@ class GameCreateFromTypeView(CreateView): #TODO
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        # type = self.kwargs.get('game_type', None)
-        print(self.kwargs.get)
+        type = self.kwargs.get('pk', None)
         context['title'] = 'game create'
         context['form']['type'].initial = type
-        print(context['form']['type'])
-        print(context)
         return context
-
-
-# @user_passes_test(lambda u: u.is_superuser)
-# def game_create_from_type(request, pk):
-#     title = 'game create'
-#     game_type = get_object_or_404(GameTypes, pk=pk)
-#     print(game_type.id)
-#     if request.method == 'POST':
-#         edit_form = GameEditForm(request.POST, request.FILES, initial={'type': game_type.id})
-#         if edit_form.is_valid():
-#             edit_form.save()
-#             return HttpResponseRedirect(reverse('admin:game_edit'))
-#     else:
-#         edit_form = GameEditForm(initial={'type': game_type.id})
-#
-#     content = {
-#         'title': title,
-#         'update_form': edit_form,
-#         'game_type': game_type.id
-#     }
-#     return render(request, 'adminapp/game_edit.html', content)
 
 
 class GameCreateView(CreateView):
@@ -264,9 +242,9 @@ class GameCreateView(CreateView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'game create'
-        context['form']['type'].initial = 4
-        print(context['form']['type'])
-        print(context)
+        # context['form']['type'].initial = 4
+        # print(context['form']['type'])
+        # print(context)
         return context
 
 
@@ -524,7 +502,35 @@ def game_delete(request, pk):
 #     return render(request, 'adminapp/games.html', content)
 
 
+# @user_passes_test(lambda u: u.is_superuser)
+# def game_create_from_type(request, pk):
+#     title = 'game create'
+#     game_type = get_object_or_404(GameTypes, pk=pk)
+#     print(game_type.id)
+#     if request.method == 'POST':
+#         edit_form = GameEditForm(request.POST, request.FILES, initial={'type': game_type.id})
+#         if edit_form.is_valid():
+#             edit_form.save()
+#             return HttpResponseRedirect(reverse('admin:game_edit'))
+#     else:
+#         edit_form = GameEditForm(initial={'type': game_type.id})
+#
+#     content = {
+#         'title': title,
+#         'update_form': edit_form,
+#         'game_type': game_type.id
+#     }
+#     return render(request, 'adminapp/game_edit.html', content)
 
 
+@user_passes_test(lambda u: u.is_superuser)
+def admin(request):
+    title = 'admin'
+
+    content = {
+        'title': title,
+
+    }
+    return render(request, 'adminapp/admin.html', content)
 
 """

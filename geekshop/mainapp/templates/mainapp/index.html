@@ -1,133 +1,47 @@
 {% extends 'mainapp/base.html'%}
 <!DOCTYPE html>
-{% load staticfiles %}
+{% load static %}
 <html lang="en">
 
 <body>
-            {% block menu %}
-            {% include 'mainapp/includes/inc_main_menu.html' %}
-            {% endblock %}
-            {% block content %}
-            <div class="content">
-                <div class="small-text">Nunc eget nibh</div>
-                <div class="small-text-border">
-                    <img class="img-small-text-border" src="{% static 'img/square_3.svg' %}" alt="img-small-text-border">
-                </div>
-                <div class="big-text">Morbi in nisl auctor</div>
+
+
+{% block hello-part %}
+    <div class="container container-main">
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 main-text">
+                <p class="text-center">Morbi in nisl auctor</p>
             </div>
-            {% endblock %}
-            {% block social %}
-            <div class="social clearfix">
-            <div class="social-icon clearfix">
-                <img src="{% static 'img/facebook-logo.png' %}" alt="facebook">
-            </div>
-            <div class="social-icon clearfix">
-                <img src="{% static 'img/twitter-logo-silhouette.png' %}" alt="twitter">
-            </div>
-            <div class="social-icon clearfix">
-                <img src="{% static 'img/rss-feed-suscription-button-symbol-for-interface.png' %}" alt="rss">
-            </div>
-            <div class="social-icon clearfix">
-                <img src="{% static 'img/vk-social-network-logo.png' %}" alt="vk">
-            </div>
-            </div>
-            <div class="social-border clearfix">
-                <div class="soc-border border-1">
-                    <a href="#"><img src="{% static 'img/f.png' %}" alt=""></a>
-                </div>
-                <div class="soc-border border-2">
-                    <a href="#"><img src="{% static 'img/f.png' %}" alt=""></a>
-                </div>
-                <div class="soc-border border-3">
-                    <a href="#"><img src="{% static 'img/f.png' %}" alt=""></a>
-                </div>
-                <div class="soc-border border-4">
-                    <a href="#"><img src="{% static 'img/f.png' %}" alt=""></a>
-                </div>
-            </div>
-        {% endblock %}
-        {% block about-us %}
-        {% include 'mainapp/includes/inc_about.html' %}
-        {% endblock %}
-        {% block services %}
-        {% include 'mainapp/includes/inc_services.html' %}
-        {% endblock %}
-        {% block our-gallery %}
-        <div class="our-gallery">
-            <div class="our-gallery-text">
-                <p>Our Gallery</p>
-            </div>
-            <div class="whole-gallery">
-                <div class="gallery clearfix">
-                    <div class="gallery-img"><img src="{% static 'img/assassin.jpg' %}" alt="assassin"></div>
-                    <div class="gallery-img-text">Assasin’s Creed: Rogue</div>
-                    <div class="gallery-button">
-                        <a href="{% url 'good' %}"><button>Buy</button></a>
-                    </div>
-                </div>
-                <div class="gallery clearfix">
-                    <div class="gallery-img"><img src="{% static 'img/tomb_raider.jpg' %}" alt="wow"></div>
-                    <div class="gallery-img-text">Tomb Raider
-                    </div>
-                    <div class="gallery-button">
-                        <button>Buy</button>
-                    </div>
-                </div>
-                <div class="gallery clearfix">
-                    <div class="gallery-img"><img src="{% static 'img/ryse.jpg' %}" alt="ryse"></div>
-                    <div class="gallery-img-text">Ryse: Son Of Rome
-                    </div>
-                    <div class="gallery-button">
-                        <button>Buy</button>
-                    </div>
-                </div>
-                <div class="gallery clearfix">
-                    <div class="gallery-img"><img src="{% static 'img/wow.jpg' %}" alt="wow"></div>
-                    <div class="gallery-img-text">World Of Warcraft:
-                        Wrath Of The Linch King</div>
-                    <div class="gallery-button">
-                        <button>Buy</button>
-                    </div>
-                </div>
-            </div>
+            <div class="col-2"></div>
         </div>
-        {% endblock %}
-        {% block testimonial %}
-        <div class="testimonial">
-            <p class="testimonial-head">Testimonial</p>
-            <img src="{% static 'img/upper-comma.png' %}" alt="" class="test-img">
-            <img src="{% static 'img/square_12.svg' %}" alt="" class="square-left">
-            <img src="{% static 'img/square_12.svg' %}" alt="" class="square-right">
-            <p class="arrow-left">&lt;</p>
-            <p class="arrow-right">&gt;</p>
-            <p class="large-text">Donec feugiat tellus sem, laoreet iaculis orci lobortis vel. Sed sed luctus orci, at lacinia risus. Ut porttitor ante ac tincidunt elementum. Curabitur ex dolor, condimentum vitae nunc vel, pulvinar semper justo. Vestibulum et aliquet magna, maximus dapibus enim. Vestibulum ex lectus, posuere eu viverra at, mattis et enim. Nam efficitur sem et lectus fringilla, at pharetra nulla luctus. Nunc cursus, augue ac ultricies volutpat, neque erat congue justo, ac pretium tellus eros a neque. Integer ipsum sem,
-                consectetur a mollis ac, cursus eu ipsum.
-
-
-                JOHN SMITH - FOUNDER</p>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 social-icons">
+                <div class="text-center">
+                    <a href="#"><img src="{% static 'img/f1.png' %}" class="img-fluid" alt="Адаптивные изображения"></a>
+                    <a href="#"><img src="{% static 'img/f2.png' %}" class="img-fluid" alt="Адаптивные изображения"></a>
+                    <a href="#"><img src="{% static 'img/f3.png' %}" class="img-fluid" alt="Адаптивные изображения"></a>
+                    <a href="#"><img src="{% static 'img/f4.png' %}" class="img-fluid" alt="Адаптивные изображения"></a>
+                </div>
+            </div>
+            <div class="col-4"></div>
         </div>
-        {% endblock %}
-        {% block news-and-events %}
-        {% include 'mainapp/includes/inc_news.html' %}
-        {% endblock %}
-        {% block our-team %}
-        {% include 'mainapp/includes/inc_our_team.html' %}
-        {% endblock %}
-        {% block subscribe %}
-        <div class="subscribe">
-            <p>Subscribe with Us</p>
-            <img src="{% static 'img/square_19.svg' %}" alt="" class="email-img">
-            <img src="{% static 'img/square_20.svg' %}" alt="" class="submit-button">
-            <form action="#">
-                <input class="email-input" type="text" placeholder="Email">
-                <input class="email-button" type="submit" value="Subscribe">
-            </form>
-        </div>
-        {% endblock %}
+    </div>
+{% endblock %}
 
+{% block about-us %}
+    {% include 'mainapp/includes/inc_about.html' %}
+{% endblock %}
 
+{% block services %}
+    {% include 'mainapp/includes/inc_services.html' %}
+{% endblock %}
 
-
+{% block testimonial %}
+    {% include 'mainapp/includes/inc_testimonial.html' %}
+{% endblock %}
 
 
 </body>

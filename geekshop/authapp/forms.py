@@ -1,6 +1,7 @@
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from .models import ShopUser
 from django.contrib.auth.forms import forms
+import random, hashlib
 
 
 class ShopUserLoginForm(AuthenticationForm):
@@ -46,9 +47,17 @@ class ShopUserRegisterForm(UserCreationForm):
     def clean_email(self):
         email = self.cleaned_data['email']
         if email and ShopUser.objects.filter(email=email).exists():
-            raise forms.ValidationError("Dude! that mail has already registered")
+            raise forms.ValidationError("Dude! that mail has been already registered")
 
         return email
+
+    def save(self):
+        user = super(ShopUserRegisterForm, self).save()
+        user.is_active = False
+        salt = hashlib.sha1(str(random.random()).encode('utf-8')).hexdigest()[:6]
+        user.activation_key = hashlib.sha1((user.email + salt).encode('utf-8')).hexdigest()
+        user.save()
+        return user
 
 
 class ShopUserEditForm(UserChangeForm):

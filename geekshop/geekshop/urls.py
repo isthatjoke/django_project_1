@@ -14,7 +14,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
-from django.contrib import admin
 from django.urls import path, include
 import mainapp.views as mainapp
 from django.conf.urls.static import static
@@ -22,15 +21,12 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', mainapp.main, name='main'),
+    path('', mainapp.MainView.as_view(), name='main'),
     path('gallery/', include('mainapp.urls', namespace='gallery')),
-    path('contacts/',mainapp.contacts, name='contacts'),
+    path('contacts/',mainapp.ContactsView.as_view(), name='contacts'),
     path('good/', mainapp.good, name='good'),
-    path('about/', mainapp.about, name='about'),
-    path('services/', mainapp.services, name='services'),
-    path('news/', mainapp.news, name='news'),
-    path('team/', mainapp.team, name='team'),
-    #path('admin/', admin.site.urls, name='admin'),
+    path('about/', mainapp.AboutView.as_view(), name='about'),
+    path('services/', mainapp.ServicesView.as_view(), name='services'),
     path('auth/', include('authapp.urls', namespace='auth')),
     path('shopping_cartapp/', include('shopping_cartapp.urls', namespace='shopping_cart')),
     path('admin/', include('adminapp.urls', namespace='admin')),
@@ -39,3 +35,12 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
+    # path('', mainapp.main, name='main'),
+    # path('contacts/',mainapp.contacts, name='contacts'),
+    # path('about/', mainapp.about, name='about'),
+    # path('services/', mainapp.services, name='services'),
+    # path('news/', mainapp.news, name='news'),
+    # path('team/', mainapp.team, name='team'),
