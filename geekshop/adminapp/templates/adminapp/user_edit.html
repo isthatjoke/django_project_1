@@ -5,21 +5,19 @@
 {% block content %}
     <div class="container">
     <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col mt-5">
+        {% if not user.avatar == '' %}
+        <img src="/media/{{ user.avatar }}" alt="avatar" class="img-thumbnail rounded float-left">
+    {% endif %}
+    </div>
+        <div class="col-6">
             <form class="form-group" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <input class="form-control btn btn-outline-success" type="submit" value="save">
     </form>
-
-    <div class="user_avatar">
-    {% if not user.avatar == '' %}
-        <img src="/media/{{ user.avatar }}" alt="avatar">
-    {% endif %}
-    </div>
         </div>
-        <div class="col-2"></div>
+        <div class="col"></div>
     </div>
     </div>
     <div class="container mb-5">

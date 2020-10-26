@@ -13,81 +13,52 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="lesson_8">
-      <change afterPath="$PROJECT_DIR$/authapp/templates/authapp/verification.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainapp/context_processors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../geekshop.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../geekshop.zip" afterDir="false" />
+    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_1">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/142ce983-3c97-455b-b2e0-afd2888e67dd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/55b41eaa-7b7b-40a0-97b7-081910fca407.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0005_auto_20201023_1657.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0006_auto_20201023_1747.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0007_auto_20201023_2026.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0008_auto_20201023_2028.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0009_auto_20201024_1934.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0010_auto_20201024_2032.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0011_auto_20201024_2112.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0012_auto_20201024_2115.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0013_auto_20201024_2121.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0014_auto_20201024_2123.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0015_auto_20201024_2129.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0016_auto_20201025_1522.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0017_auto_20201025_1655.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authapp/pipeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geekshop/json/github.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geekshop/json/google.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geekshop/json/secret_key.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geekshop/json/vk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainapp/management/commands/update_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/users_avatars/45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/users_avatars/46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/users_avatars/fat-mike.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/github.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/github_sm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/google.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/google_sm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/vk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4bc3e66-ce16-4f77-84a7-e36d372c0e3a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a4bc3e66-ce16-4f77-84a7-e36d372c0e3a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/geekshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/geekshop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/game_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/game_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/game_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/game_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/game_type_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/game_type_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/game_type_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/game_type_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/game_types.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/game_types.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/games.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/games.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/includes/inc_admin_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/includes/inc_admin_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/user_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/user_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/user_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/user_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/verification.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/verification.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/json/links_menu.json" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/json/links_menu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/good.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/good.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_gallery_sub_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_gallery_sub_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_head.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_team_text_and_icons.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_team_text_and_icons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_our_team.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_our_team.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_services.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/team.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requerements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_head.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_main_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/shopping_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/shopping_cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip-20.2.3.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip-20.2.3.dist-info/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip-20.2.3.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip-20.2.3.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip-20.2.3.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip-20.2.3.dist-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip-20.2.3.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/index/collector.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/index/collector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/index/package_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/index/package_finder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/operations/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/operations/check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/resolution/resolvelib/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/resolution/resolvelib/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/resolution/resolvelib/candidates.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/resolution/resolvelib/candidates.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/resolution/resolvelib/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/resolution/resolvelib/factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/resolution/resolvelib/provider.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/resolution/resolvelib/provider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/resolution/resolvelib/resolver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/resolution/resolvelib/resolver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/utils/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/utils/compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/utils/hashes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../venv/lib/python3.8/site-packages/pip/_internal/utils/hashes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,9 +71,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="package.json" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="package.json" />
         <option value="Python Script" />
       </list>
     </option>
@@ -136,7 +107,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="lesson_8" />
+        <entry key="$PROJECT_DIR$/.." value="course_2_lesson_1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -149,6 +120,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -165,15 +137,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/geekshop/json" />
       <recent name="$PROJECT_DIR$/adminapp/templates/adminapp" />
       <recent name="$PROJECT_DIR$/adminapp/templates" />
       <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/mainapp/json" />
-      <recent name="$PROJECT_DIR$/authapp" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes" />
     </key>
   </component>
   <component name="RunManager" selected="Python.forms">
@@ -302,7 +274,8 @@
       <workItem from="1602161159677" duration="3084000" />
       <workItem from="1602243458608" duration="103538000" />
       <workItem from="1603052879065" duration="14733000" />
-      <workItem from="1603289800007" duration="10927000" />
+      <workItem from="1603289800007" duration="23201000" />
+      <workItem from="1603487078347" duration="20231000" />
     </task>
     <task id="LOCAL-00001" summary="first_commit">
       <created>1600511382327</created>
@@ -367,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602756993122</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="course_2_lesson_1">
+      <created>1603367053148</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603367053150</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +375,8 @@
     <MESSAGE value="lesson_6" />
     <MESSAGE value="lesson_7" />
     <MESSAGE value="lesson_8" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson_8" />
+    <MESSAGE value="course_2_lesson_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="course_2_lesson_1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="135" key="#Inspections" timestamp="1603045878971">
@@ -406,15 +387,16 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="449" y="281" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1601160003925" />
-    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602012795221">
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603548196902">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1601999991292" />
-    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1602012795221" />
-    <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601022545879">
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603548196902" />
+    <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603644477914">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1601022545879" />
+    <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603644477914" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602264682516">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -452,19 +434,20 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1601999645703" />
-    <state width="221" height="457" key="HiddenNamespacesPopup" timestamp="1600982308047">
+    <state width="221" height="457" key="HiddenNamespacesPopup" timestamp="1603480096510">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="221" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1600982308047" />
+    <state width="221" height="457" key="HiddenNamespacesPopup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603480096510" />
     <state x="229" y="89" key="SettingsEditor" timestamp="1603289846936">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603289846936" />
     <state x="229" y="89" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603128498220" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1602756995488">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1603367055978">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1602756995488" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603367055978" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1602445944658" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />

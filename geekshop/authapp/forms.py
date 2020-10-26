@@ -1,11 +1,10 @@
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
-from .models import ShopUser
+from .models import ShopUser, ShopUserProfile
 from django.contrib.auth.forms import forms
 import random, hashlib
 
 
 class ShopUserLoginForm(AuthenticationForm):
-    required_fields = ['username', 'password']
 
     class Meta:
         model = ShopUser
@@ -15,14 +14,9 @@ class ShopUserLoginForm(AuthenticationForm):
         super(ShopUserLoginForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
-            if field_name in self.required_fields:
-                field.help_text = '* required'
-            else:
-                field.help_text = ''
 
 
 class ShopUserRegisterForm(UserCreationForm):
-    required_fields = ['username', 'email', 'age', 'password1', 'password2']
 
     class Meta:
         model = ShopUser
@@ -32,10 +26,6 @@ class ShopUserRegisterForm(UserCreationForm):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
-            if field_name in self.required_fields:
-                field.help_text = '* required'
-            else:
-                field.help_text = ''
 
     def clean_age(self):
         data = self.cleaned_data['age']
@@ -61,7 +51,6 @@ class ShopUserRegisterForm(UserCreationForm):
 
 
 class ShopUserEditForm(UserChangeForm):
-    required_fields = ['username', 'email', 'age', 'password']
 
     class Meta:
         model = ShopUser
@@ -71,10 +60,6 @@ class ShopUserEditForm(UserChangeForm):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
-            if field_name in self.required_fields:
-                field.help_text = '* required'
-            else:
-                field.help_text = ''
             if field_name == 'password':
                 field.widget = forms.HiddenInput()
 
@@ -84,3 +69,16 @@ class ShopUserEditForm(UserChangeForm):
             raise forms.ValidationError("Dude! you're too young!")
 
         return data
+
+
+class ShopUserProfileEditForm(forms.ModelForm):
+    class Meta:
+        model = ShopUserProfile
+        fields = ('tagline', 'about_me', 'gender', 'localization', 'social_page')
+
+    def __init__(self, *args, **kwargs):
+        super(ShopUserProfileEditForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'
+
+
