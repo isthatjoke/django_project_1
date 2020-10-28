@@ -24,13 +24,14 @@ urlpatterns = [
     path('', mainapp.MainView.as_view(), name='main'),
     path('gallery/', include('mainapp.urls', namespace='gallery')),
     path('contacts/',mainapp.ContactsView.as_view(), name='contacts'),
-    path('good/', mainapp.good, name='good'),
+    # path('good/', mainapp.good, name='good'),
     path('about/', mainapp.AboutView.as_view(), name='about'),
     path('services/', mainapp.ServicesView.as_view(), name='services'),
     path('auth/', include('authapp.urls', namespace='auth')),
     path('shopping_cartapp/', include('shopping_cartapp.urls', namespace='shopping_cart')),
     path('admin/', include('adminapp.urls', namespace='admin')),
     path('', include('social_django.urls', namespace='social')),
+    path('order/', include('ordersapp.urls', namespace='order')),
 ]
 
 

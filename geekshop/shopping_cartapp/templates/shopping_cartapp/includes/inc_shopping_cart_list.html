@@ -1,36 +1,51 @@
-
+{% load my_tags %}
 {% for item in shopping_cart_items %}
-                <div class="shopping-cart">
-            <div class="sc-img">
-                <a href="{% url 'gallery:game' item.product_id %}"><img src="/media/{{ item.product.image }}" alt="game-image"></a>
+    <div class="container mt-5 text-center">
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'gallery:game' item.game_id %}"><img src="{{ item.game.image|media_folder_games }}" class="img-fluid rounded" alt="Адаптивные изображения"></a>
+        </div>
+    </div>
+    </div>
 
-                </div>
-               <span class="sc-type-name">{{ item.product.type.name }}
-               </span>
-                    <span class="sc-game-name">{{ item.product.name }}</span>
-                    <span class="sc-game-price">{{ item.product.price }} $</span>
-                <div class="sc-input">
-                <input type="number" name="{{ item.pk }}"
+
+    <div class="container mt-5 text-center">
+    <div class="row">
+        <div class="col">
+        <span>{{ item.game.type.name }}</span>
+            <span>{{ item.game.name }}</span>
+            <br>
+            <span>{{ item.game.price }} $</span>
+            <br>
+            <input type="number" name="{{ item.pk }}"
                            min="0"
                        value="{{ item.quantity }}">
-                </div>
-                    <span class="sc-total-cost">{{ item.product_cost }} $</span>
-
-                <button class="btn btn-round">
+            <span>{{ item.product_cost }} $</span>
+            <button class="btn btn-round">
         <a href="{% url 'shopping_cart:remove' item.pk %}" class="">
             <i class="fas fa-trash-alt"></i>
         </a>
       </button>
-
-
-</div>
         {% endfor %}
-
+</div>
+</div>
+</div>
     {% if shopping_cart_items %}
-<div class="sc-summary">
-<p>
+<div class="container text-center mt-5">
+<div class="row">
+    <div class="col">
+    <p>
 Total items: {{ shopping_cart_items.0.total_quantity }},
 Total price: {{ shopping_cart_items.0.total_cost }} $.
 </p>
 </div>
+</div>
+</div>
+        <div class="container text-center">
+        <div class="row">
+            <div class="col">
+            <a href="{% url 'ordersapp:order_create' %}" class="btn btn-success" role="button">Create new order</a>
+            </div>
+        </div>
+        </div>
 {% endif %}

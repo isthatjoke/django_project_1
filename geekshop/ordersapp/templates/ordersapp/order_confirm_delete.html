@@ -1,0 +1,38 @@
+{% extends 'ordersapp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mb-5">
+    <div class="row mb-5">
+        <div class="col">
+            <h1 class="text-center">
+                Do you really wanna to delete this order?
+            </h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<div class="row">
+    <div class="col text-center">
+        {% include 'ordersapp/includes/inc_order_summary.html' %}
+        <form class="form-group" action="{% url 'ordersapp:order_delete' object.pk %}" method="post">
+            {% csrf_token %}
+            <input class="btn btn-danger" type="submit" value="delete">
+        </form>
+    </div>
+</div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <a href="{% url 'ordersapp:orders_list' %}" class="btn btn-success">
+                Cancel
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -92,7 +92,7 @@ def save_user_profile_vk(backend, user, response, *args, **kwargs):
 def save_user_profile_google(backend, user, response, *args, **kwargs):
     if backend.name != 'google-oauth2':
         return
-    print(response)
+
     if response['picture']:
         get_photo = requests.get(response['picture'])
         with open(f'{BASE_DIR}/media/users_avatars/{user.id}.jpg', 'wb') as photo:
@@ -101,3 +101,13 @@ def save_user_profile_google(backend, user, response, *args, **kwargs):
 
     if response['locale']:
         user.shopuserprofile.localization = response['locale']
+
+
+
+    for el in response:
+        print(el)
+
+
+
+
+

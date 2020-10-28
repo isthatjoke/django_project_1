@@ -3,55 +3,44 @@
 <html lang="en">
 
 <head>
-    {% include 'shopping_cartapp/includes/inc_head.html' %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/solid.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/brands.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+    {% block js %}
+        <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/shopping_cart.js' %}"></script>
+    {% endblock %}
 </head>
 
 <body>
-
-    <div class="container-main">
-        {% block hello-part %}
-        <div class="hello-part">
-            <div class="header clearfix">
-                <div class="header-line">
-                    <a href="{% url 'main' %}" class="logo clearfix">
-                        <p class="historical">Historical</p>
-                        <p class="games">GAMES</p>
-                    </a>
-                    <div class="phone clearfix">
-                        <img class="phone-icon" src="{% static 'img/phone.jpg' %}" alt="phone-icon">
-                        <div class="phone-text">+123 456 7890</div>
-                    </div>
-                    <div class="email clearfix">
-                        <img src="{% static 'img/email.jpg' %}" alt="email-icon" class="email-icon">
-                        <div class="email-text">info@example.com</div>
-                    </div>
-                    <div class="search clearfix">
-                        <img src="{% static 'img/square_2.svg' %}" alt="search">
-                        <img class="vert-border" src="{% static 'img/figure_2.svg' %}" alt="vert-border">
-                        <form action="#">
-                            <input class="search-input" type="search" placeholder="Search">
-                            <input class="search-icon" type="submit" value="">
-                        </form>
-                    </div>
-
-
-                </div>
-
-            {% block menu %}
-            {% include 'shopping_cartapp/includes/inc_main_menu.html' %}
-            {% endblock %}
+        {% block menu %}
+            {% include 'mainapp/includes/inc_main_menu.html' %}
         {% endblock %}
-        </div>
-        </div>
+
+
         {% block content %}
 
         {% endblock %}
-{% block footer %}
-        <div class="footer">
-            <p class="footer-text">© {% now 'Y' %} Hystorical Games. Test web-site <a href="https://geekbrains.ru">geekbrains'</a> student</p>
+
+
+        {% block footer %}
+        <div class="container-fluid container-footer mt-5 fixed-bottom">
+            <div class="row">
+                <div class="col text-center">
+                    <p>
+                        © {% now 'Y' %} Hystorical Games. Test web-site <a href="https://geekbrains.ru">geekbrains'</a> student
+                    </p>
+                </div>
+            </div>
         </div>
         {% endblock %}
-    </div>
+
 
 
 </body>

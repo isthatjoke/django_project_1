@@ -33,10 +33,10 @@ def shopping_cart(request):
 @login_required()
 def add(request, pk=None):
     game = get_object_or_404(Game, pk=pk)
-    shopping_cart = ShoppingCart.objects.filter(user=request.user, product=game).first()
+    shopping_cart = ShoppingCart.objects.filter(user=request.user, game=game).first()
 
     if not shopping_cart:
-        shopping_cart = ShoppingCart.objects.create(user=request.user, product=game)
+        shopping_cart = ShoppingCart.objects.create(user=request.user, game=game)
 
     shopping_cart.quantity += 1
     shopping_cart.save()

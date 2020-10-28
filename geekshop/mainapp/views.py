@@ -37,6 +37,9 @@ def get_game_types():
         game_types.append(game_type_dict)
     return game_types
 
+def get_game(pk):
+    return Game.objects.filter(id=pk).first()
+
 
 class MainView(TemplateView):
     template_name = 'mainapp/index.html'
@@ -95,16 +98,26 @@ class GamesView(ListView):
         return Game.objects.all().filter(is_active=True).order_by('name')
 
 
-def good(request, pk):
-    title = 'game'
-    same_games = get_same_games(pk)
-    content = {
-        'links_menu': links_menu,
-        'title': title,
-        'game': get_object_or_404(Game, pk=pk),
-        'same_games': same_games,
-    }
-    return render(request, 'mainapp/good.html', content)
+class GameView(ListView):
+    model = Game
+    queryset = Game.objects.filter(is_active=True).order_by('name')
+    template_name = 'mainapp/good.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        game_pk = self.kwargs.get('pk', None)
+        game = Game.objects.get(id=game_pk)
+        context['title'] = game.name
+        context['links_menu'] = links_menu
+        context['gametype'] = game.type
+        print(context)
+        return context
+
+    def get_queryset(self):
+        game_pk = self.kwargs.get('pk', None)
+        game = Game.objects.filter(id=game_pk)
+        print(game)
+        return game
 
 
 class ServicesView(TemplateView):
@@ -226,7 +239,16 @@ def services(request):
     }
     return render(request, 'mainapp/about.html', content)
 
-
+# def good(request, pk):
+#     title = 'game'
+#     same_games = get_same_games(pk)
+#     content = {
+#         'links_menu': links_menu,
+#         'title': title,
+#         'game': get_object_or_404(Game, pk=pk),
+#         'same_games': same_games,
+#     }
+#     return render(request, 'mainapp/good.html', content)
 
 
 """

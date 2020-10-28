@@ -1,7 +1,7 @@
 {% load static %}
 
 <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <a class="navbar-brand" href="{% url 'main' %}">GAME-WORLD</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
@@ -10,7 +10,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <div class="navbar-nav mr-auto mt-2 mt-lg-0">
                     {% for item in links_menu %}
                     <li class="nav-item">
                         <a href="{% url item.href %}"
@@ -25,11 +25,18 @@
                     {% endfor %}
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a href="{% url 'auth:edit' %}" class="nav-link">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
                             {{ user.first_name|title|default:'User' }}
                         </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="{% url 'auth:edit' %}">Profile</a>
+                            <a class="dropdown-item" href="{% url 'ordersapp:orders_list' %}">Orders</a>
+                        </div>
+                        </div>
                     </li>
                     {% endif %}
+
                     {% if user.is_superuser %}
                     <li class="nav-item">
                         <a href="{% url 'admin:admin' %}" class="nav-link">
@@ -60,12 +67,7 @@
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                     </li>
-                    <span class="nav-link">
-                        {% if shopping_cart %}
-                            items: {{ shopping_cart.0.total_quantity }},
-                            whole price: {{ shopping_cart.0.total_cost }} $
-                        {% endif %}
-                    </span>
+                    {% include 'mainapp/includes/inc_shopping_cart_in_menu.html' %}
                     </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search">
