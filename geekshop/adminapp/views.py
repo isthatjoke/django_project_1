@@ -4,10 +4,11 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, TemplateView
-from adminapp.forms import GameTypeEditForm, GameEditForm, ShopUserAdminEditForm
+from adminapp.forms import GameTypeEditForm, GameEditForm, ShopUserAdminEditForm, OrderEditForm, OrderItemEditForm
 from authapp.forms import ShopUserRegisterForm
 from authapp.models import ShopUser
 from mainapp.models import GameTypes, Game
+from ordersapp.models import Order, OrderItem
 
 
 class AdminView(TemplateView):
@@ -87,7 +88,6 @@ class UserDeleteView(DeleteView):
 
     def get_template_names(self):
         names = super().get_template_names()
-        print(names)
         return names
 
     def delete(self, request, *args, **kwargs):
@@ -288,6 +288,82 @@ class GameDeleteView(DeleteView):
 
         return HttpResponseRedirect(self.get_success_url())
 
+
+class OrderListView(ListView):
+    queryset = Order.objects.all().order_by('-is_active')
+    template_name = 'adminapp/orders.html'
+    # ordering = ['-is_active']
+    paginate_by = 5
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'orders'
+        return context
+
+
+class OrderUpdateView(UpdateView):
+    model = Order
+    template_name = 'adminapp/order_edit.html'
+    success_url = reverse_lazy('admin:orders')
+    form_class = OrderEditForm
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'update order'
+        return context
+
+
+class OrderDeleteView(DeleteView):
+    model = Order
+    template_name = 'adminapp/order_delete.html'
+    success_url = reverse_lazy('admin:orders')
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'delete order'
+        return context
+
+    def get_template_names(self):
+        names = super().get_template_names()
+        return names
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.is_active:
+            self.object.is_active = False
+        else:
+            self.object.is_active = True
+        self.object.save()
+
+        return HttpResponseRedirect(self.get_success_url())
+
+
+class OrderDetailUpdateView(UpdateView):
+    model = OrderItem
+    template_name = 'adminapp/order_details.html'
+    success_url = reverse_lazy('admin:orders')
+    form_class = OrderItemEditForm
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'update order details'
+        return context
 
 
 

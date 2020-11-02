@@ -21,6 +21,10 @@ urlpatterns = [
     path('games/create/', adminapp.GameCreateView.as_view(), name='game_create'),
     path('games/edit/<int:pk>/', adminapp.GameUpdateView.as_view(), name='game_update'),
     path('games/delete/<int:pk>/', adminapp.GameDeleteView.as_view(), name='game_delete'),
+    path('orders/', adminapp.OrderListView.as_view(), name='orders'),
+    path('orders/<int:pk>/', adminapp.OrderUpdateView.as_view(), name='order_update'),
+    path('orders/delete/<int:pk>/', adminapp.OrderDeleteView.as_view(), name='order_delete'),
+    path('orders/details/<int:pk>', adminapp.OrderDetailUpdateView.as_view(), name='order_details'),
     ]
 
 
