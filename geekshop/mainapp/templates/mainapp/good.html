@@ -1,155 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% load my_tags %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Good</title>
-    <link rel="stylesheet" href="/static/style_good.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/pen6rnr.css">
-    <link rel="stylesheet" href="https://use.typekit.net/pen6rnr.css">
-</head>
+{% block gallery %}
+    {% for game in object_list %}
+<div class="container text-center">
+    <div class="row mt-5">
+        <div class="col">
+            <img src="{{ game.image|media_folder_games }}" class="img-fluid rounded" alt="Адаптивные изображения">
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col">
+            <p>{{ game.name }}</p>
+        </div>
+    </div>
+</div>
 
-<body>
-    <div class="container">
-        <div class="hello-part">
-            <div class="header clearfix">
-                <div class="header-line">
-                    <a href="#" class="logo clearfix">
-                        <p class="historical">Historical</p>
-                        <p class="games">GAMES</p>
-                    </a>
-                    <div class="phone clearfix">
-                        <img class="phone-icon" src="/static/img/phone.jpg" alt="phone-icon">
-                        <div class="phone-text">+123 456 7890</div>
-                    </div>
-                    <div class="email clearfix">
-                        <img src="/static/img/email.jpg" alt="email-icon" class="email-icon">
-                        <div class="email-text">info@example.com</div>
-                    </div>
-                    <div class="search clearfix">
-                        <img src="/static/img/square_2.svg" alt="search">
-                        <img class="vert-border" src="/static/img/figure_2.svg" alt="vert-border">
-                        <form action="#">
-                            <input class="search-input" type="search" placeholder="Search">
-                            <input class="search-icon" type="submit" value="">
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <ul class="menu clearfix">
-                <li class="menu-list"><a class="menu-link" href="/">Home</a></li>
-                <li class="menu-list"><a class="menu-link" href="#">About</a></li>
-                <li class="menu-list"><a class="menu-link" href="#">Services</a></li>
-                <li class="menu-list"><a class="menu-link active" href="/gallery/">Gallery</a></li>
-                <li class="menu-list"><a class="menu-link" href="#">News</a></li>
-                <li class="menu-list"><a class="menu-link" href="#">Team</a></li>
-                <li class="menu-list"><a class="menu-link" href="/contacts/">Contact Us</a></li>
-            </ul>
-            <div class="broke-line">
-                <img class="img-broke-line" src="/static/img/figure_1_1.png" alt="broke-line">
-            </div>
-            <div class="menu-bottom-border">
-                <img class="img-bottom-border" src="/static/img/square_3_1.png" alt="bottom-border">
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <p>{{ game.description }}</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container text-center mb-5">
+    <div class="row">
+        <div class="col text-right">
+            <h6>{{ game.price }} $</h6>
+        </div>
+        <div class="col text-left">
+            <form action="{% url 'shopping_cartapp:add' game.pk %}" method="get">
+                <button type="submit" value="Buy" class="btn btn-danger">Buy</button>
+                <input type="hidden" name="scroll" value="">
+            </form>
+        </div>
+    </div>
+</div>
+        <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'mainapp:games' %}" class="btn btn-primary" role="button">
+            back to gallery
+        </a>
             </div>
         </div>
-        <div class="whole-good clearfix">
-            <div class="good clearfix">
-                <img src="/static/img/ACRR_01_Cinematic_NewYork_321742.jpg" alt="big-img" class="big-img">
-                <img src="/static/img/ACRR_01_Cinematic_NewYork_321742.jpg" alt="img-1" class="img-1">
-                <img src="/static/img/ACCHD_03_ParkourOnLog_321724.jpg" alt="img-2" class="img-2">
-                <img src="/static/img/ACCHD_05_SailingSunsetVillage_321730.jpg" alt="img-3" class="img-3">
-                <img src="/static/img/ACCHD_09_SailingSunsetByVillage_321736.jpg" alt="img-4" class="img-4">
-            </div>
-            <div class="good clearfix">
-                <p class="game-name">Assasin’s Creed: </p>
-                <p class="name-red">Rogue</p>
-                <p class="price">$29.99</p>
-                <button class="buy">Buy</button>
-                <p class="desc">The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control. The story is set in the mid-18th century during the Seven Years' War, and follows Shay Patrick Cormac, an Assassin-turned-Templar who hunts down former members of his Brotherhood after being betrayed by them. Gameplay in Rogue is very similar to that of Black Flag with a mixture of ship-based naval exploration and third-person land-based exploration with some new features.</p>
-            </div>
-            </div>
-            <div class="similar">
-               <p class="similar-head">Similar games</p>
-                <div class="big-gallery clearfix">
-                <div class="whole-gallery clearfix">
-                    <div class="gallery one clearfix">
-                        <div class="gallery-img"><img src="/static/img/shadow_of_war.jpg" alt="shadow_of_war"></div>
-                        <div class="gallery-img-text">MIDDLE-EARTH:
-Shadow Of War</div>
-                        <div class="gallery-button">
-                            <button>Buy</button>
-                        </div>
-                    </div>
-                    <div class="gallery two clearfix">
-                        <div class="gallery-img"><img src="/static/img/dishonored.jpg" alt="dishonored"></div>
-                        <div class="gallery-img-text">DISHONORED 2
-                        </div>
-                        <div class="gallery-button">
-                            <button>Buy</button>
-                        </div>
-                    </div>
-                    <div class="gallery three clearfix">
-                        <div class="gallery-img">
-                        <a href=""><img src="/static/img/Thief.jpg" alt="Thief">
-                            </a>
-                        </div>
-                        <div class="gallery-img-text">THIEF
-                        </div>
-                        <div class="gallery-button">
-                            <button>Buy</button>
-                        </div>
-                    </div>
-                    <div class="gallery four clearfix">
-                        <div class="gallery-img">
-                        <a href="#"><img src="/static/img/hitman.jpg" alt="hitman">
-                            </a></div>
-                        <div class="gallery-img-text">HITMAN</div>
-                        <div class="gallery-button">
-                            <button>Buy</button>
-                        </div>
-                    </div>
-                </div>
-
-                
-                </div>
-            </div>
-            <div class="contact-us">
-                <p class="contact-text">Contact Us</p>
-                <button class="up"></button>
-                <div class="get-in-touch">
-                    <p class="get-head-text">Get in touch with us</p>
-                    <p class="get-main-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,sheets
-                        containing Lorem Ipsum passages sed do, At vero eos et accusamus et
-                        iusto odio digs qui blanditiis
-
-                        Leningradsky AVE 39, BLDG 79
-                        MOSCOW 125167, Russia
-
-                        Telephone : +00 111 222 3333
-
-                        FAX : +1 888 888 4444
-
-                        Email : mail@example.com</p>
-                </div>
-                <div class="contact-form">
-                    <form action="#">
-                        <input class="input-data" type="text" placeholder="Name">
-                        <input class="input-data" type="text" placeholder="Email">
-                        <textarea class="input-message" id="#" placeholder="Message"></textarea>
-                        <input class="contact-submit" type="submit" value="SUBMIT">
-                    </form>
-                    
-                </div>
-                <div class="route-map">
-                    <p class="route">Route Map</p>
-                    <div class="route-map-img">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A52db086ee63a7ca00607b96914abe36526267731ed48efaed781b9d12e128363&amp;width=970&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
-                    </div>
-                </div>
-            </div>
-            <div class="footer">
-                <p class="footer-text">© 2020 Hystorical Games. Test web-site <a href="https://geekbrains.ru">geekbrains'</a> student</p>
-            </div>
         </div>
-</body></html>
+{% endfor %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#<html lang="en">#}
+{##}
+{#<body>#}
+{#            {% block menu %}#}
+{#            {% include 'mainapp/includes/inc_main_menu.html' %}#}
+{#            {% endblock %}#}
+{#        {% block whole-good %}#}
+{#        <div class="whole-good clearfix">#}
+{#            <div class="good clearfix">#}
+{#                <img src="/media/{{ game.image }}" alt="big-img" class="big-img">#}
+{#            </div>#}
+{#            <div class="good clearfix">#}
+{#                <p class="game-name">{{ game.name }} </p>#}
+{##}
+{#                <p class="price">{{ game.price }} $</p>#}
+{#                <form action="{% url 'shopping_cartapp:add' game.pk %}">#}
+{#                                    <button class="buy" type="submit" value="Buy">Buy</button>#}
+{#                                </form>#}
+{##}
+{#                <p class="desc">{{ game.description }}</p>#}
+{#            </div>#}
+{#            </div>#}
+{#        {% endblock %}#}
+{#            {% block similar %}#}
+{#            <div class="our-gallery">#}
+{#            <div class="our-gallery-text">#}
+{#                <p>Similar Games</p>#}
+{#            </div>#}
+{#                <div class="big-gallery">#}
+{#                    {% for element in same_games %}#}
+{#                    <div class="gallery clearfix">#}
+{#                            <a href="{% url 'gallery:game' element.pk %}">#}
+{#                                <img class="gallery-img" src="/media/{{ element.image }}" alt="{{ element.name }}">#}
+{#                            </a>#}
+{#                            <div class="gallery-description">{{ element.description }}</div>#}
+{#                            <div class="gallery-img-text">{{ element.name }}</div>#}
+{#                            <div class="short-description">{{ element.short_desc }}</div>#}
+{#                            <div class="gallery-button">#}
+{#                                <div class="db-price">{{ element.price }} $</div>#}
+{#                                <form action="{% url 'shopping_cartapp:add' element.pk %}">#}
+{#                                    <button type="submit" value="Buy">Buy</button>#}
+{#                                </form>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+{#                </div>#}
+{#                </div>#}
+{##}
+{#            {% endblock %}#}
+{#</body>#}
+{#</html>#}
