@@ -22,12 +22,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col order_total_quantity">
             Total Quantity: {{ object.get_total_quantity}}
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col order_total_cost">
             Total Cost: {{ object.get_total_cost}}
         </div>
     </div>
@@ -46,12 +46,12 @@
     </div>
     {% if shopping_cart.0 %}
     <div class="row">
-        <div class="col">
+        <div class="col order_total_quantity">
             Total Quantity: {{ shopping_cart.0.get_total_quantity}}
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col order_total_cost">
             Total Cost: {{ shopping_cart.0.get_total_cost}}
         </div>
     </div>

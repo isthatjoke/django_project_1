@@ -13,52 +13,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_2">
-      <change afterPath="$PROJECT_DIR$/authapp/migrations/0018_auto_20201028_1228.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authapp/migrations/0019_auto_20201028_1404.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authapp/migrations/0020_auto_20201028_1404.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authapp/migrations/0021_auto_20201028_1404.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authapp/migrations/0022_auto_20201028_1404.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authapp/migrations/0023_auto_20201028_1404.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authapp/migrations/0024_auto_20201028_1412.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_shopping_cart_in_menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/migrations/0002_auto_20201028_1404.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/includes/inc_order_actions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/includes/inc_order_summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_confirm_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ordersapp/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shopping_cartapp/migrations/0002_auto_20201028_1404.py" afterDir="false" />
+    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_3">
+      <change afterPath="$PROJECT_DIR$/authapp/migrations/0025_auto_20201031_1953.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geekshop/json/gmail_email.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.formset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/order_script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/pipeline.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geekshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/good.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/good.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_head.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_services.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/includes/inc_order_actions.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/includes/inc_order_actions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/includes/inc_order_summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/includes/inc_order_summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_confirm_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping_cartapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_head.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_main_menu.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_shopping_cart_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes/inc_shopping_cart_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/shopping_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/shopping_cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping_cartapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/views.py" afterDir="false" />
@@ -74,10 +46,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="package.json" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -110,7 +82,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="course_2_lesson_2" />
+        <entry key="$PROJECT_DIR$/.." value="course_2_lesson_3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -281,7 +253,7 @@
       <workItem from="1603052879065" duration="14733000" />
       <workItem from="1603289800007" duration="23201000" />
       <workItem from="1603487078347" duration="21516000" />
-      <workItem from="1603824900045" duration="29780000" />
+      <workItem from="1603824900045" duration="64815000" />
     </task>
     <task id="LOCAL-00001" summary="first_commit">
       <created>1600511382327</created>
@@ -360,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603703505726</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="course_2_lesson_3">
+      <created>1603923273810</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1603923273810</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,13 +369,14 @@
     <MESSAGE value="lesson_8" />
     <MESSAGE value="course_2_lesson_1" />
     <MESSAGE value="course_2_lesson_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="course_2_lesson_2" />
+    <MESSAGE value="course_2_lesson_3" />
+    <option name="LAST_COMMIT_MESSAGE" value="course_2_lesson_3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="354" y="135" key="#Inspections" timestamp="1603045878971">
+    <state x="354" y="135" key="#Inspections" timestamp="1604255322853">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="354" y="135" key="#Inspections/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603045878971" />
+    <state x="354" y="135" key="#Inspections/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604255322853" />
     <state x="449" y="281" key="#Notifications" timestamp="1601160003925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -406,11 +386,11 @@
     </state>
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1601999991292" />
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603548196902" />
-    <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603644477914">
+    <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604085704714">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1601022545879" />
-    <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603644477914" />
+    <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604085704714" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602264682516">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -458,11 +438,15 @@
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603289846936" />
     <state x="229" y="89" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603128498220" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1603703507619">
+    <state x="450" y="200" width="540" height="524" key="StructurePopup" timestamp="1604169621176">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="450" y="200" width="540" height="524" key="StructurePopup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604169621176" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1603923275772">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603703507619" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1602445944658" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603923275772" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

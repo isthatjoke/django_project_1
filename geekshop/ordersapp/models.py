@@ -58,8 +58,24 @@ class Order(models.Model):
         self.is_active = False
         self.save()
 
+#
+# class OrderItemQuerySet(models.QuerySet):
+#     def delete(self, *args, **kwargs):
+#         for object in self:
+#             object.game.quantity += object.quantity
+#             object.game.save()
+#         super(OrderItemQuerySet, self).delete(*args, **kwargs)
+
+
+# class OrderItemManager(models.Manager):
+#     def get_queryset(self):
+#         return super().get_queryset().filter(is_active=True)
+
 
 class OrderItem(models.Model):
+    # objects = OrderItemQuerySet.as_manager()
+    # objects = OrderItemManager()
+
     order = models.ForeignKey(Order, related_name='orderitems', on_delete=models.CASCADE, verbose_name='order')
     game = models.ForeignKey(Game, verbose_name='game', on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField(verbose_name='quantity', default=0)
@@ -67,3 +83,10 @@ class OrderItem(models.Model):
     def get_game_cost(self):
         return self.game.price * self.quantity
 
+    def delete(self):
+        self.game.quantity += self.quantity
+        self.game.save()
+
+    @staticmethod
+    def get_item(pk):
+        return OrderItem.objects.get(pk=pk)

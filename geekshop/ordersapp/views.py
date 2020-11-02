@@ -1,4 +1,6 @@
 from django.db import transaction
+from django.db.models.signals import pre_save, pre_delete
+from django.dispatch import receiver
 from django.forms import inlineformset_factory
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
@@ -27,17 +29,26 @@ class OrderItemsCreate(CreateView):
     def get_context_data(self, **kwargs):
         data = super(OrderItemsCreate, self).get_context_data(**kwargs)
         OrderFormSet = inlineformset_factory(Order, OrderItem, form=OrderItemForm, extra=1)
+        # print(OrderItem.game)
+        # print(OrderItem)
+        # print(OrderFormSet)
 
         if self.request.POST:
             formset = OrderFormSet(self.request.POST)
         else:
             shopping_cart_items = ShoppingCart.get_items(self.request.user)
             if len(shopping_cart_items):
-                OrderFormSet = inlineformset_factory(Order, OrderItem, form=OrderItemForm, extra=len(shopping_cart_items))
+                OrderFormSet = inlineformset_factory(Order, OrderItem, form=OrderItemForm,
+                                                     extra=len(shopping_cart_items))
                 formset = OrderFormSet()
                 for num, form in enumerate(formset.forms):
                     form.initial['game'] = shopping_cart_items[num].game
                     form.initial['quantity'] = shopping_cart_items[num].quantity
+                    form.initial['price'] = shopping_cart_items[num].game.price
+
+                    # print(form)
+                    # print(form['game'])
+                    # print(form)
             else:
                 formset = OrderFormSet()
         data['orderitems'] = formset
@@ -48,6 +59,7 @@ class OrderItemsCreate(CreateView):
         orderitems = context['orderitems']
 
         with transaction.atomic():
+            ShoppingCart.get_items(self.request.user).delete()
             form.instance.user = self.request.user
             self.object = form.save()
             if orderitems.is_valid():
@@ -72,7 +84,11 @@ class OrderItemsUpdate(UpdateView):
         if self.request.POST:
             data['orderitems'] = OrderFormSet(self.request.POST, instance=self.object)
         else:
-            data['orderitems'] = OrderFormSet(instance=self.object)
+            formset = OrderFormSet(instance=self.object)
+            for form in formset.forms:
+                if form.instance.pk:
+                    form.initial['price'] = form.instance.game.price
+            data['orderitems'] = formset
 
         return data
 
@@ -111,8 +127,23 @@ def order_forming_complete(request, pk):
     order = get_object_or_404(Order, pk=pk)
     order.status = Order.SENT_TO_PROCEED
     order.save()
-    shopping_cart_items = ShoppingCart.get_items(request.user)
-    shopping_cart_items.delete()
+
 
     return HttpResponseRedirect(reverse('ordersapp:orders_list'))
 
+
+@receiver(pre_save, sender=OrderItem)
+@receiver(pre_save, sender=ShoppingCart)
+def game_quantity_update_save(sender, update_fields, instance, **kwargs):
+    if instance.pk:
+        instance.game.quantity -= instance.quantity - sender.get_item(instance.pk).quantity
+    else:
+        instance.game.quantity -= instance.quantity
+    instance.game.save()
+
+
+@receiver(pre_delete, sender=OrderItem)
+@receiver(pre_delete, sender=ShoppingCart)
+def game_quantity_update_delete(sender, instance, **kwargs):
+    instance.game.quantity += instance.quantity
+    instance.game.save()

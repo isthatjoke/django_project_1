@@ -150,8 +150,8 @@ with open(JSON_PATH + 'github.json') as github:
     GITHUB = json.load(github)
 
 SOCIAL_AUTH_GITHUB_KEY = GITHUB['SOCIAL_AUTH_GITHUB_KEY']
-SOCIAL_AUTH_GITHUB_SECRET = GITHUB['SOCIAL_AUTH_GITHUB_KEY']
-
+SOCIAL_AUTH_GITHUB_SECRET = GITHUB['SOCIAL_AUTH_GITHUB_SECRET']
+SOCIAL_AUTH_GITHUB_SCOPE = ['user:email']
 
 SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.social_details',
@@ -199,14 +199,16 @@ LOGIN_URL='/auth/login/'
 LOGIN_ERROR_URL = '/'
 
 
+with open(JSON_PATH + 'gmail_email.json') as gmail:
+    GMAIL = json.load(gmail)
 
 # email
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DOMAIN_NAME = 'http://localhost:8000'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'gbrainstestmail@gmail.com'
-EMAIL_HOST_PASSWORD = 'jyukejnseukgcqwq'
+EMAIL_HOST_USER = GMAIL['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = GMAIL['EMAIL_HOST_PASSWORD']
 # EMAIL_USE_SSL = False
 EMAIL_USE_TLS = True
 SERVER_EMAIL = EMAIL_HOST_USER

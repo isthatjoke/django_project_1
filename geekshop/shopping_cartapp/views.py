@@ -32,16 +32,19 @@ def shopping_cart(request):
 
 @login_required()
 def add(request, pk=None):
-    game = get_object_or_404(Game, pk=pk)
-    shopping_cart = ShoppingCart.objects.filter(user=request.user, game=game).first()
-
-    if not shopping_cart:
-        shopping_cart = ShoppingCart.objects.create(user=request.user, game=game)
-
-    shopping_cart.quantity += 1
-    shopping_cart.save()
     if 'login' in request.META.get('HTTP_REFERER'):
         return HttpResponseRedirect(reverse('gallery:game', args=[pk]))
+
+    game = get_object_or_404(Game, pk=pk)
+    old_shopping_cart = ShoppingCart.get_game(user=request.user, game=game)
+
+    if old_shopping_cart:
+        old_shopping_cart[0].quantity += 1
+        old_shopping_cart[0].save()
+    else:
+        new_shopping_cart = ShoppingCart(user=request.user, game=game)
+        new_shopping_cart.quantity += 1
+        new_shopping_cart.save()
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
@@ -63,6 +66,7 @@ def edit(request, pk, quantity):
         if quantity > 0:
             new_shopping_cart_item.quantity = quantity
             new_shopping_cart_item.save()
+
         else:
             new_shopping_cart_item.delete()
 
