@@ -13,106 +13,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_3">
+    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/includes/inc_admin_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/includes/inc_admin_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_contact_us.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_contact_us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_testimonial.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_testimonial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ordersapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/$.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/532219.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/ACCHD_03_ParkourOnLog_321724.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/ACCHD_05_SailingSunsetVillage_321730.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/ACCHD_09_SailingSunsetByVillage_321736.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/ACRR_01_Cinematic_NewYork_321742.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/Layer_3_copy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/Thief.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/World_of_Warships.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/arrow-up-bold-circle-outline.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/arrow-up-bold-circle-outline.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/arrow_up.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/assassin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/back_page.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/bf1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/bf2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/bf4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/branch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/cda8d63e371e3da4b332164c3da4ada5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/cod.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/dishonored.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/ellipse_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/ellipse_3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/email.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/f.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/facebook-logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/facebook-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/fig_3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/figure_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/figure_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/figure_2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/for_honor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/g3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/g7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/g9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/github.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/google.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/header_back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/header_back.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/hitman.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/main_background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/phone.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/poll.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/right-arrow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/rss-feed-suscription-button-symbol-for-interface (1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/rss-feed-suscription-button-symbol-for-interface-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/rss-feed-suscription-button-symbol-for-interface.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/ryse.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/search.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/shadow_of_war.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_10.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_10_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_12.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_14.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_14_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_15.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_16.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_18.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_19.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_20.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/square_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/subscribe_background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/t1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/t2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/t3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/t4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/testimonial.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/tomb_raider.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/twitter-logo-silhouette.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/twitter-logo-silhouette.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/vk-social-network-logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/vk-social-network-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/wot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/wow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/order_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/order_script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,7 +244,7 @@
       <workItem from="1603052879065" duration="14733000" />
       <workItem from="1603289800007" duration="23201000" />
       <workItem from="1603487078347" duration="21516000" />
-      <workItem from="1603824900045" duration="71836000" />
+      <workItem from="1603824900045" duration="81686000" />
     </task>
     <task id="LOCAL-00001" summary="first_commit">
       <created>1600511382327</created>
@@ -425,7 +337,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604305276389</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="course_2_lesson_4">
+      <created>1604326399351</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1604326399351</updated>
+    </task>
+    <task id="LOCAL-00015" summary="course_2_lesson_4">
+      <created>1604326454369</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1604326454369</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +382,8 @@
     <MESSAGE value="course_2_lesson_1" />
     <MESSAGE value="course_2_lesson_2" />
     <MESSAGE value="course_2_lesson_3" />
-    <option name="LAST_COMMIT_MESSAGE" value="course_2_lesson_3" />
+    <MESSAGE value="course_2_lesson_4" />
+    <option name="LAST_COMMIT_MESSAGE" value="course_2_lesson_4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="135" key="#Inspections" timestamp="1604255322853">
@@ -529,10 +456,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604169621176" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604305280082">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604326488732">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604305280082" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604326488732" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603923275772" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />

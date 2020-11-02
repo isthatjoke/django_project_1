@@ -29,6 +29,11 @@ class Game(models.Model):
     def __str__(self):
         return f'{self.name} {self.type.name}'
 
+    @staticmethod
+    def get_items():
+        return Game.objects.filter(is_active=True)
 
 class Router(models.Model):
     specifications = models.FileField(upload_to='router_specifications')
+
+
