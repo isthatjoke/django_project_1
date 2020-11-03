@@ -2,13 +2,14 @@ from django.db import transaction
 from django.db.models.signals import pre_save, pre_delete
 from django.dispatch import receiver
 from django.forms import inlineformset_factory
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 
+from mainapp.models import Game
 from ordersapp.forms import OrderItemForm
 from ordersapp.models import Order, OrderItem
 from shopping_cartapp.models import ShoppingCart
@@ -29,9 +30,6 @@ class OrderItemsCreate(CreateView):
     def get_context_data(self, **kwargs):
         data = super(OrderItemsCreate, self).get_context_data(**kwargs)
         OrderFormSet = inlineformset_factory(Order, OrderItem, form=OrderItemForm, extra=1)
-        # print(OrderItem.game)
-        # print(OrderItem)
-        # print(OrderFormSet)
 
         if self.request.POST:
             formset = OrderFormSet(self.request.POST)
@@ -45,10 +43,6 @@ class OrderItemsCreate(CreateView):
                     form.initial['game'] = shopping_cart_items[num].game
                     form.initial['quantity'] = shopping_cart_items[num].quantity
                     form.initial['price'] = shopping_cart_items[num].game.price
-
-                    # print(form)
-                    # print(form['game'])
-                    # print(form)
             else:
                 formset = OrderFormSet()
         data['orderitems'] = formset
@@ -128,8 +122,17 @@ def order_forming_complete(request, pk):
     order.status = Order.SENT_TO_PROCEED
     order.save()
 
-
     return HttpResponseRedirect(reverse('ordersapp:orders_list'))
+
+
+def get_game_price(request, pk):
+    if request.is_ajax():
+        game = Game.objects.filter(pk=int(pk)).first()
+        print(game)
+        if game:
+            return JsonResponse({'price': game.price})
+        else:
+            return JsonResponse({'price': 0})
 
 
 @receiver(pre_save, sender=OrderItem)

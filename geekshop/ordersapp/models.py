@@ -87,6 +87,7 @@ class OrderItem(models.Model):
         self.game.quantity += self.quantity
         self.game.save()
 
+
     @staticmethod
     def get_item(pk):
         return OrderItem.objects.get(pk=pk)

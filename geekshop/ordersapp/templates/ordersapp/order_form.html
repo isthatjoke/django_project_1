@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block content %}
-            <script src="{% static 'js/jquery.formset.js' %}"></script>
-        <script src="{% static 'js/order_script.js' %}"></script>
+{#            <script src="{% static 'js/jquery.formset.js' %}"></script>#}
+{#        <script src="{% static 'js/order_script.js' %}"></script>#}
  {% include 'ordersapp/includes/inc_order_summary.html' %}
     <div class="container mt-5">
     <div class="row">
@@ -18,7 +18,9 @@
                     <thead>
                     <tr>
                     {% for field in form.visible_fields %}
-                        <th scope="col" class="{% cycle 'td1' 'td2' 'td3' 'td4' %} order formset_td">{{ field.label|capfirst }}</th>
+                        <th scope="col" class="{% cycle 'td1' 'td2' 'td3' 'td4' %} order formset_td">
+                            {{ field.label|capfirst }}
+                        </th>
                     {% endfor %}
                     </tr>
                     </thead>
@@ -38,14 +40,13 @@
                     {% else %}
                     {% if field.value %}
                     <span class="orderitems-{{ forloop.parentloop.counter0 }}-price">
-                        {{ field.value }} $
-                    </span>
+                        {{ field.value }}
+                    </span> $
                     {% endif %}
                     {% endif %}
                     </td>
                 {% endfor %}
                 </tr>
-
                 {% endfor %}
                 </table>
             <input class="form-control btn btn-outline-success" type="submit" value="save">
