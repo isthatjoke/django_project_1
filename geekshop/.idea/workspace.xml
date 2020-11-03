@@ -13,18 +13,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_4">
+    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_4_before_server">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/order_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/order_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/order_script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +234,7 @@
       <workItem from="1603052879065" duration="14733000" />
       <workItem from="1603289800007" duration="23201000" />
       <workItem from="1603487078347" duration="21516000" />
-      <workItem from="1603824900045" duration="81686000" />
+      <workItem from="1603824900045" duration="82536000" />
     </task>
     <task id="LOCAL-00001" summary="first_commit">
       <created>1600511382327</created>
@@ -351,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604326454369</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="course_2_lesson_4_before_server">
+      <created>1604352555498</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1604352555498</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +380,8 @@
     <MESSAGE value="course_2_lesson_2" />
     <MESSAGE value="course_2_lesson_3" />
     <MESSAGE value="course_2_lesson_4" />
-    <option name="LAST_COMMIT_MESSAGE" value="course_2_lesson_4" />
+    <MESSAGE value="course_2_lesson_4_before_server" />
+    <option name="LAST_COMMIT_MESSAGE" value="course_2_lesson_4_before_server" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="135" key="#Inspections" timestamp="1604255322853">
@@ -456,11 +454,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604169621176" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604326488732">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604352557679">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604326488732" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603923275772" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604352557679" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
