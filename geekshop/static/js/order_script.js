@@ -21,19 +21,10 @@ window.onload = function () {
         orderSummaryRecalc();
 }
 
-    function orderSummaryRecalc() {
-       order_total_quantity = 0;
-       order_total_cost = 0;
 
-       for (let i=0; i < TOTAL_FORMS; i++) {
-           order_total_quantity += quantity_arr[i];
-           order_total_cost += quantity_arr[i] * price_arr[i];
-       }
-       $('.order_total_quantity').html(order_total_quantity.toString());
-       $('.order_total_cost').html(Number(order_total_cost.toFixed(2)).toString());
-    }
 
     if (!order_total_quantity) {
+        TOTAL_FORMS = parseInt($('input[name="orderitems-TOTAL_FORMS"]').val());
         for (let i=0; i<TOTAL_FORMS; i++) {
             order_total_quantity += quantity_arr[i];
             order_total_cost += quantity_arr[i] * price_arr[i];
@@ -117,7 +108,19 @@ window.onload = function () {
             orderSummaryUpdate(price_arr[orderitem_num], delta_quantity);
         }
     }
-}
 
+    function orderSummaryRecalc() {
+        TOTAL_FORMS = parseInt($('input[name="orderitems-TOTAL_FORMS"]').val());
+        order_total_quantity = 0;
+        order_total_cost = 0;
+
+        for (let i=0; i < TOTAL_FORMS; i++) {
+            order_total_quantity += quantity_arr[i];
+            order_total_cost += quantity_arr[i] * price_arr[i];
+        }
+        $('.order_total_quantity').html(order_total_quantity.toString());
+        $('.order_total_cost').html(Number(order_total_cost.toFixed(2)).toString());
+    }
+}
 
 

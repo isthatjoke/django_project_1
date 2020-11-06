@@ -1,11 +1,13 @@
 import json
 import os
 from django.conf import settings
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import JsonResponse
 from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
 from django.template.loader import render_to_string
 from django.urls import reverse
+from django.utils.decorators import method_decorator
+from django.views.generic import ListView
 
 from mainapp.models import Game
 from shopping_cartapp.models import ShoppingCart
@@ -16,8 +18,24 @@ with open(os.path.join(JSON_DIR, 'links_menu.json'), 'r') as file:
     temp_data = json.load(file)
     links_menu = temp_data["links"]
 
+#
+# class ShoppingCartListView(ListView):
+#     model = ShoppingCart
+#     template_name = 'shopping_cartapp/shopping_cart.html'
+#
+#     def get_context_data(self, *, object_list=None, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['title'] = 'shopping cart'
+#         context['links_menu'] = links_menu
+#         return context
+#
+#     def get_queryset(self, *args, **kwargs):
+#         queryset = super(ShoppingCartListView, self).get_queryset(*args, **kwargs)
+#         print(queryset)
+#         return ShoppingCart.objects.get(user=self.request.user)
 
-@login_required()
+
+# @login_required()
 def shopping_cart(request):
     title = 'shopping cart'
     shopping_cart_items = ShoppingCart.objects.filter(user=request.user)
