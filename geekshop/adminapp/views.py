@@ -200,17 +200,6 @@ class GamesView(ListView):
         return Game.objects.all()
 
 
-@user_passes_test(lambda u: u.is_superuser)
-def game(request, pk):
-    title = 'game'
-    _game = Game.objects.filter(pk=pk)
-    content = {
-        'title': title,
-        'game': _game,
-    }
-    return render(request, 'adminapp/game.html', content)
-
-
 class GameCreateFromTypeView(CreateView):
     model = Game
     template_name = 'adminapp/game_edit.html'
@@ -609,4 +598,15 @@ def admin(request):
     }
     return render(request, 'adminapp/admin.html', content)
 
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def game(request, pk):
+    title = 'game'
+    _game = Game.objects.filter(pk=pk)
+    content = {
+        'title': title,
+        'game': _game,
+    }
+    return render(request, 'adminapp/game.html', content)
 """

@@ -27,7 +27,7 @@ with open(JSON_PATH + 'secret_key.json') as secret_key:
 SECRET_KEY = SECRET_KEY['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -88,9 +88,16 @@ WSGI_APPLICATION = 'geekshop.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'geekshop',
+        'USER': 'django',
+        'PASSWORD': 'geekbrains',
+        'HOST': 'localhost',
     }
 }
 
@@ -120,6 +127,7 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
     'social_core.backends.github.GithubOAuth2',
 )
+
 
 #VK
 with open(JSON_PATH + 'vk.json') as vk:
@@ -204,7 +212,9 @@ with open(JSON_PATH + 'gmail_email.json') as gmail:
 
 # email
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DOMAIN_NAME = 'http://localhost:8000'
+# DOMAIN_NAME = 'http://localhost:8000'
+DOMAIN_NAME = 'djangopj.ru'
+SERVER_NAME = 'djangopj.ru'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = GMAIL['EMAIL_HOST_USER']

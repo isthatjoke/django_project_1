@@ -110,13 +110,11 @@ class GameView(ListView):
         context['title'] = game.name
         context['links_menu'] = links_menu
         context['gametype'] = game.type
-        print(context)
         return context
 
     def get_queryset(self):
         game_pk = self.kwargs.get('pk', None)
         game = Game.objects.filter(id=game_pk)
-        print(game)
         return game
 
 
