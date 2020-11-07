@@ -27,6 +27,7 @@ with open(JSON_PATH + 'secret_key.json') as secret_key:
 SECRET_KEY = SECRET_KEY['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = True
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
@@ -212,9 +213,10 @@ with open(JSON_PATH + 'gmail_email.json') as gmail:
 
 # email
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# DOMAIN_NAME = 'http://localhost:8000'
 DOMAIN_NAME = 'djangopj.ru'
 SERVER_NAME = 'djangopj.ru'
+# DOMAIN_NAME = 'http://localhost:8000'
+# SERVER_NAME = 'http://localhost:8000'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = GMAIL['EMAIL_HOST_USER']

@@ -85,6 +85,13 @@ h3 {
     font-weight: 500;
 }
 
+.container-services h6 .red {
+    color: red;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+}
+
 .container-services p {
     color: #999999;
     font-family: roboto-condensed, sans-serif;
