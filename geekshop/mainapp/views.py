@@ -16,17 +16,17 @@ with open(os.path.join(JSON_DIR, 'links_menu.json'), 'r') as file:
 
 def get_shopping_cart(user):
     if user.is_authenticated:
-        return ShoppingCart.objects.filter(user=user)
+        return ShoppingCart.objects.filter(user=user).select_related()
     return []
 
 
 def get_same_games(pk):
     game_type = Game.objects.filter(pk=pk).first()
-    return Game.objects.filter(type=game_type.type).exclude(pk=pk)
+    return Game.objects.filter(type=game_type.type).exclude(pk=pk).select_related()
 
 
 def get_game_types():
-    game_type = GameTypes.objects.filter(is_active=True)
+    game_type = GameTypes.objects.filter(is_active=True).select_related()
     game_types = []
     for el in game_type:
         game_type_dict = {}
@@ -37,6 +37,7 @@ def get_game_types():
         game_types.append(game_type_dict)
     return game_types
 
+
 def get_game(pk):
     return Game.objects.filter(id=pk).first()
 
@@ -46,7 +47,7 @@ class MainView(TemplateView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'main'
+        context['title'] = 'GAME-WORLD'
         context['links_menu'] = links_menu
         return context
 
@@ -63,7 +64,7 @@ class ContactsView(TemplateView):
 
 class GamesAllView(ListView):
     model = Game
-    queryset = Game.objects.filter(is_active=True).order_by('name')
+    queryset = Game.objects.filter(is_active=True).order_by('name').select_related()
     template_name = 'mainapp/gallery.html'
     paginate_by = 2
 
@@ -77,7 +78,7 @@ class GamesAllView(ListView):
 
 class GamesView(ListView):
     model = Game
-    queryset = Game.objects.filter(is_active=True).order_by('name')
+    queryset = Game.objects.filter(is_active=True).order_by('name').select_related()
     template_name = 'mainapp/gallery.html'
     paginate_by = 2
 
@@ -93,14 +94,14 @@ class GamesView(ListView):
     def get_queryset(self):
         type = self.kwargs.get('pk', None)
         if type is not None:
-            games = Game.objects.filter(is_active=True, type_id=type).order_by('name')
+            games = Game.objects.filter(is_active=True, type_id=type).order_by('name').select_related()
             return games
-        return Game.objects.all().filter(is_active=True).order_by('name')
+        return Game.objects.all().filter(is_active=True).order_by('name').select_related()
 
 
 class GameView(ListView):
     model = Game
-    queryset = Game.objects.filter(is_active=True).order_by('name')
+    queryset = Game.objects.filter(is_active=True).order_by('name').select_related()
     template_name = 'mainapp/good.html'
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -114,7 +115,7 @@ class GameView(ListView):
 
     def get_queryset(self):
         game_pk = self.kwargs.get('pk', None)
-        game = Game.objects.filter(id=game_pk)
+        game = Game.objects.filter(id=game_pk).select_related()
         return game
 
 
