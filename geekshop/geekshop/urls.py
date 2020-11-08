@@ -28,7 +28,7 @@ urlpatterns = [
     path('about/', mainapp.AboutView.as_view(), name='about'),
     path('services/', mainapp.ServicesView.as_view(), name='services'),
     path('auth/', include('authapp.urls', namespace='auth')),
-    path('shopping_cartapp/', include('shopping_cartapp.urls', namespace='shopping_cart')),
+    path('shopping_cart/', include('shopping_cartapp.urls', namespace='shopping_cart')),
     path('admin/', include('adminapp.urls', namespace='admin')),
     path('', include('social_django.urls', namespace='social')),
     path('order/', include('ordersapp.urls', namespace='order')),
@@ -37,6 +37,8 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    import debug_toolbar
+    urlpatterns += [path('__debug__/', include(debug_toolbar.urls))]
 
 
 

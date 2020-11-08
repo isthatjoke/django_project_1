@@ -38,7 +38,7 @@ with open(os.path.join(JSON_DIR, 'links_menu.json'), 'r') as file:
 # @login_required()
 def shopping_cart(request):
     title = 'shopping cart'
-    shopping_cart_items = ShoppingCart.objects.filter(user=request.user)
+    shopping_cart_items = ShoppingCart.objects.filter(user=request.user).select_related()
 
     content = {
         'links_menu': links_menu,
@@ -88,7 +88,7 @@ def edit(request, pk, quantity):
         else:
             new_shopping_cart_item.delete()
 
-        shopping_cart_items = ShoppingCart.objects.filter(user=request.user)
+        shopping_cart_items = ShoppingCart.objects.filter(user=request.user).select_related()
 
         content = {
             'shopping_cart_items': shopping_cart_items,

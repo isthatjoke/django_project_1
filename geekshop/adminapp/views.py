@@ -195,7 +195,7 @@ class GamesView(ListView):
     def get_queryset(self):
         type = self.kwargs.get('pk', None)
         if type is not None:
-            games = Game.objects.filter(type_id=type)
+            games = Game.objects.filter(type_id=type).select_related()
             return games
         return Game.objects.all()
 

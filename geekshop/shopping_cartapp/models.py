@@ -27,7 +27,7 @@ class ShoppingCart(models.Model):
 
     @staticmethod
     def get_items(user):
-        return ShoppingCart.objects.filter(user=user).order_by('game__type')
+        return ShoppingCart.objects.filter(user=user).order_by('game__type').select_related()
 
     @property
     def product_cost(self):
@@ -35,19 +35,19 @@ class ShoppingCart(models.Model):
 
     @property
     def total_quantity(self):
-        _items = ShoppingCart.objects.filter(user=self.user)
+        _items = ShoppingCart.objects.filter(user=self.user).select_related()
         _total_quantity = sum(list(map(lambda x: x.quantity, _items)))
         return _total_quantity
 
     @property
     def total_cost(self):
-        _items = ShoppingCart.objects.filter(user=self.user)
+        _items = ShoppingCart.objects.filter(user=self.user).select_related()
         _total_cost = sum(list(map(lambda x: x.product_cost, _items)))
         return _total_cost
 
     @staticmethod
     def get_game(user, game):
-        return ShoppingCart.objects.filter(user=user, game=game)
+        return ShoppingCart.objects.filter(user=user, game=game).select_related()
 
     # def delete(self, *args, **kwargs):
     #     self.game.quantity += self.quantity

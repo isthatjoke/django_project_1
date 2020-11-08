@@ -28,7 +28,7 @@ class Order(models.Model):
     created = models.DateTimeField(verbose_name='made', auto_now_add=True)
     updated = models.DateTimeField(verbose_name='updated', auto_now=True)
     status = models.CharField(verbose_name='status', max_length=3, choices=ORDER_STATUS_CHOICES, default=FORMING)
-    is_active = models.BooleanField(verbose_name='active', default=True)
+    is_active = models.BooleanField(verbose_name='active', default=True, db_index=True)
 
     class Meta:
         ordering = ('-created',)
@@ -86,7 +86,6 @@ class OrderItem(models.Model):
     def delete(self):
         self.game.quantity += self.quantity
         self.game.save()
-
 
     @staticmethod
     def get_item(pk):
