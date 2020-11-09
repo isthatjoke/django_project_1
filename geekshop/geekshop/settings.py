@@ -27,16 +27,16 @@ with open(JSON_PATH + 'secret_key.json') as secret_key:
 SECRET_KEY = SECRET_KEY['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
-# if DEBUG:
-#    def show_toolbar(request):
-#        return True
-#
-# DEBUG_TOOLBAR_CONFIG = {
-#        'SHOW_TOOLBAR_CALLBACK': show_toolbar,
-#    }
+if DEBUG:
+   def show_toolbar(request):
+       return True
+
+DEBUG_TOOLBAR_CONFIG = {
+       'SHOW_TOOLBAR_CALLBACK': show_toolbar,
+   }
 
 DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.versions.VersionsPanel',
