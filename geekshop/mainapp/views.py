@@ -1,6 +1,9 @@
 from django.conf import settings
+from django.core.cache import cache
 from django.shortcuts import render, get_object_or_404
 import json, os
+
+from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, TemplateView
 from mainapp.models import Game, GameTypes
 from shopping_cartapp.models import ShoppingCart
@@ -11,7 +14,19 @@ from shopping_cartapp.models import ShoppingCart
 JSON_DIR = os.path.join(settings.BASE_DIR, 'mainapp/json')
 with open(os.path.join(JSON_DIR, 'links_menu.json'), 'r') as file:
     temp_data = json.load(file)
-    links_menu = temp_data["links"]
+    links_menu_from_file = temp_data["links"]
+
+
+def get_links_menu():
+    if settings.LOW_CACHE:
+        key = 'links_menu'
+        links_menu = cache.get(key)
+        if links_menu is None:
+            links_menu = links_menu_from_file
+            cache.set(key, links_menu)
+        return links_menu
+    else:
+        return links_menu_from_file
 
 
 def get_shopping_cart(user):
@@ -23,6 +38,18 @@ def get_shopping_cart(user):
 def get_same_games(pk):
     game_type = Game.objects.filter(pk=pk).first()
     return Game.objects.filter(type=game_type.type).exclude(pk=pk).select_related()
+
+
+def get_game_types_cached():
+    if settings.LOW_CACHE:
+        key = 'game_types'
+        game_types = cache.get(key)
+        if game_types is None:
+            game_types = get_game_types()
+            cache.set(key, game_types)
+        return game_types
+    else:
+        return get_game_types()
 
 
 def get_game_types():
@@ -42,23 +69,25 @@ def get_game(pk):
     return Game.objects.filter(id=pk).first()
 
 
+@cache_page
 class MainView(TemplateView):
     template_name = 'mainapp/index.html'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'GAME-WORLD'
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         return context
 
 
+@cache_page
 class ContactsView(TemplateView):
     template_name = 'mainapp/contacts.html'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'contact'
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         return context
 
 
@@ -71,8 +100,8 @@ class GamesAllView(ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'gallery'
-        context['links_menu'] = links_menu
-        context['game_types'] = get_game_types()
+        context['links_menu'] = get_links_menu()
+        context['game_types'] = get_game_types_cached()
         return context
 
 
@@ -86,8 +115,8 @@ class GamesView(ListView):
         context = super().get_context_data(**kwargs)
         game_type = self.kwargs.get('pk', None)
         context['title'] = 'games'
-        context['links_menu'] = links_menu
-        context['game_types'] = get_game_types()
+        context['links_menu'] = get_links_menu()
+        context['game_types'] = get_game_types_cached()
         context['gametype'] = game_type
         return context
 
@@ -109,7 +138,7 @@ class GameView(ListView):
         game_pk = self.kwargs.get('pk', None)
         game = Game.objects.get(id=game_pk)
         context['title'] = game.name
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         context['gametype'] = game.type
         return context
 
@@ -119,23 +148,25 @@ class GameView(ListView):
         return game
 
 
+@cache_page
 class ServicesView(TemplateView):
     template_name = 'mainapp/services.html'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'services'
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         return context
 
 
+@cache_page
 class AboutView(TemplateView):
     template_name = 'mainapp/about.html'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'about'
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         return context
 
 

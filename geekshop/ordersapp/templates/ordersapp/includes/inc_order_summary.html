@@ -16,22 +16,36 @@
             Updated: {{ object.updated|date:"Y-m-d H:i:s" }}
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            Status: {{ object.get_status_display }}
+{#    <div class="row">#}
+{#        <div class="col">#}
+{#            Status: {{ object.get_status_display }}#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="row">#}
+{#        <div class="col order_total_quantity">#}
+{#            Total Quantity: {{ object.get_total_quantity}}#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="row">#}
+{#        <div class="col order_total_cost">#}
+{#            Total Cost: {{ object.get_total_cost}}#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+
+    {% with object_summary=object.get_summary %}
+        <div class="row">
+            <div class="col order_total_quantity">
+                Total Quantity: {{ object_summary.total_quantity}}
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col order_total_quantity">
-            Total Quantity: {{ object.get_total_quantity}}
+        <div class="row">
+            <div class="col order_total_cost">
+                Total Cost: {{ object_summary.total_cost}}
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col order_total_cost">
-            Total Cost: {{ object.get_total_cost}}
-        </div>
-    </div>
-</div>
+    {% endwith %}
+
 {% else %}
 <div class="container text-center mt-5 mb-5">
     <div class="row">

@@ -2,6 +2,8 @@ from django.conf import settings
 from django.db import models
 
 # Create your models here.
+from django.utils.functional import cached_property
+
 from mainapp.models import Game
 
 
@@ -25,6 +27,10 @@ class ShoppingCart(models.Model):
     def get_item(pk):
         return ShoppingCart.objects.get(pk=pk)
 
+    @cached_property
+    def get_items_cached(self):
+        return self.user.shopping_cart.select_related()
+
     @staticmethod
     def get_items(user):
         return ShoppingCart.objects.filter(user=user).order_by('game__type').select_related()
@@ -35,13 +41,15 @@ class ShoppingCart(models.Model):
 
     @property
     def total_quantity(self):
-        _items = ShoppingCart.objects.filter(user=self.user).select_related()
+        # _items = ShoppingCart.objects.filter(user=self.user).select_related()
+        _items = self.get_items_cached
         _total_quantity = sum(list(map(lambda x: x.quantity, _items)))
         return _total_quantity
 
     @property
     def total_cost(self):
-        _items = ShoppingCart.objects.filter(user=self.user).select_related()
+        # _items = ShoppingCart.objects.filter(user=self.user).select_related()
+        _items = self.get_items_cached
         _total_cost = sum(list(map(lambda x: x.product_cost, _items)))
         return _total_cost
 
