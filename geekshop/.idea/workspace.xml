@@ -13,7 +13,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_7" />
+    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_7">
+      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -521,7 +523,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605038691628</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="course_2_lesson_7">
+      <created>1605039451313</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1605039451313</updated>
+    </task>
+    <task id="LOCAL-00042" summary="course_2_lesson_7">
+      <created>1605039545373</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1605039545373</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -635,11 +651,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604169621176" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605038693307">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605039546887">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604397118640" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605038693307" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605039546887" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

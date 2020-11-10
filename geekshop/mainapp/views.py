@@ -128,7 +128,7 @@ class GamesView(ListView):
 
 class GameView(ListView):
     model = Game
-    queryset = Game.objects.filter(is_active=True).order_by('name').select_related()
+    # queryset = Game.objects.filter(is_active=True).order_by('name').select_related()
     template_name = 'mainapp/good.html'
 
     def get_context_data(self, *, object_list=None, **kwargs):
