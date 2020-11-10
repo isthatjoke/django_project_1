@@ -105,7 +105,7 @@ class GamesAllView(ListView):
 
 class GamesView(ListView):
     model = Game
-    queryset = Game.objects.filter(is_active=True).order_by('name').select_related()
+    # queryset = Game.objects.filter(is_active=True).order_by('name').select_related()
     template_name = 'mainapp/gallery.html'
     paginate_by = 2
 
@@ -119,11 +119,12 @@ class GamesView(ListView):
         return context
 
     def get_queryset(self):
-        type = self.kwargs.get('pk', None)
-        if type is not None:
-            games = Game.objects.filter(is_active=True, type_id=type).order_by('name').select_related()
-            return games
-        return Game.objects.all().filter(is_active=True).order_by('name').select_related()
+        type_pk = self.kwargs.get('pk', None)
+        games = cache.get(f'games_of_type_{type_pk}')
+        if games is not None:
+            games = Game.objects.filter(is_active=True, type_id=type_pk).order_by('name').select_related()
+            cache.set(f'games_of_type_{type_pk}', games)
+        return games
 
 
 class GameView(ListView):
@@ -135,9 +136,6 @@ class GameView(ListView):
         context = super().get_context_data(**kwargs)
         game_pk = self.kwargs.get('pk', None)
         game = cache.get(f'game_pk_{game_pk}')
-        if game is None:
-            game = Game.objects.get(id=game_pk)
-            cache.set(f'game_pk_{game_pk}', game)
         context['title'] = game.name
         context['links_menu'] = links_menu_cached()
         context['gametype'] = game.type
