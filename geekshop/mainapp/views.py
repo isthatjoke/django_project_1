@@ -14,7 +14,19 @@ from shopping_cartapp.models import ShoppingCart
 JSON_DIR = os.path.join(settings.BASE_DIR, 'mainapp/json')
 with open(os.path.join(JSON_DIR, 'links_menu.json'), 'r') as file:
     temp_data = json.load(file)
-    links_menu = temp_data["links"]
+    links_menu_from_file = temp_data["links"]
+
+
+def get_links_menu():
+    if settings.LOW_CACHE:
+        key = 'links_menu'
+        links_menu = cache.get(key)
+        if links_menu is None:
+            links_menu = links_menu_from_file
+            cache.set(key, links_menu)
+        return links_menu
+    else:
+        return links_menu_from_file
 
 
 def get_shopping_cart(user):
@@ -64,7 +76,7 @@ class MainView(TemplateView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'GAME-WORLD'
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         return context
 
 
@@ -75,7 +87,7 @@ class ContactsView(TemplateView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'contact'
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         return context
 
 
@@ -88,7 +100,7 @@ class GamesAllView(ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'gallery'
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         context['game_types'] = get_game_types_cached()
         return context
 
@@ -103,7 +115,7 @@ class GamesView(ListView):
         context = super().get_context_data(**kwargs)
         game_type = self.kwargs.get('pk', None)
         context['title'] = 'games'
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         context['game_types'] = get_game_types_cached()
         context['gametype'] = game_type
         return context
@@ -126,7 +138,7 @@ class GameView(ListView):
         game_pk = self.kwargs.get('pk', None)
         game = Game.objects.get(id=game_pk)
         context['title'] = game.name
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         context['gametype'] = game.type
         return context
 
@@ -143,7 +155,7 @@ class ServicesView(TemplateView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'services'
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         return context
 
 
@@ -154,7 +166,7 @@ class AboutView(TemplateView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'about'
-        context['links_menu'] = links_menu
+        context['links_menu'] = get_links_menu()
         return context
 
 
