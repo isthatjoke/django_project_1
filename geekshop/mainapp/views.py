@@ -134,10 +134,10 @@ class GameView(ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         game_pk = self.kwargs.get('pk', None)
-        game = cache.get(f'game_pk_{game_pk}')
-        if game is None:
-            game = Game.objects.filter(id=game_pk).select_related()
-            cache.set(f'game_pk_{game_pk}', game)
+        # game = cache.get(f'game_pk_{game_pk}')
+        # if game is None:
+        #     game = Game.objects.filter(id=game_pk).select_related()
+        #     cache.set(f'game_pk_{game_pk}', game)
         # context['title'] = game.name
         context['links_menu'] = links_menu_cached()
         # context['gametype'] = game.type
