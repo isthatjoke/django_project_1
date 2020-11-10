@@ -196,7 +196,7 @@ SOCIAL_AUTH_PIPELINE = (
 
 LANGUAGE_CODE = 'en-en'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
