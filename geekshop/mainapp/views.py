@@ -69,7 +69,7 @@ def get_game(pk):
     return Game.objects.filter(id=pk).first()
 
 
-@cache_page
+
 class MainView(TemplateView):
     template_name = 'mainapp/index.html'
 
@@ -80,7 +80,7 @@ class MainView(TemplateView):
         return context
 
 
-@cache_page
+
 class ContactsView(TemplateView):
     template_name = 'mainapp/contacts.html'
 
@@ -148,7 +148,7 @@ class GameView(ListView):
         return game
 
 
-@cache_page
+
 class ServicesView(TemplateView):
     template_name = 'mainapp/services.html'
 
@@ -159,7 +159,7 @@ class ServicesView(TemplateView):
         return context
 
 
-@cache_page
+
 class AboutView(TemplateView):
     template_name = 'mainapp/about.html'
 
