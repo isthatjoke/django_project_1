@@ -1,6 +1,6 @@
 {% extends 'ordersapp/base.html' %}
 {% load static %}
-
+{% load cache %}
 {% block content %}
             <script src="{% static 'js/jquery.formset.js' %}"></script>
         <script src="{% static 'js/order_script.js' %}"></script>
@@ -36,7 +36,13 @@
                     {% endif %}
                     {{ field.errors.as_ul }}
                     {% if field.name != 'price' %}
-                    {{ field }}
+                        {% if field.name == 'game' %}
+                            {% cache 3600 orderitemform_game field.value %}
+                            {{ field }}
+                            {% endcache %}
+                            {% else %}
+                            {{ field }}
+                            {% endif %}
                     {% else %}
                     {% if field.value %}
                     <span class="orderitems-{{ forloop.parentloop.counter0 }}-price">
