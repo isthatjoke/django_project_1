@@ -91,7 +91,7 @@ class ContactsView(TemplateView):
 
 class GamesAllView(ListView):
     model = Game
-    queryset = Game.objects.filter(is_active=True).order_by('name').select_related()
+    #queryset = Game.objects.filter(is_active=True).order_by('name').select_related()
     template_name = 'mainapp/gallery.html'
     paginate_by = 2
 
@@ -101,6 +101,13 @@ class GamesAllView(ListView):
         context['links_menu'] = links_menu_cached()
         context['game_types'] = get_game_types_cached()
         return context
+
+    def get_queryset(self):
+        games = cache.get('all_games')
+        if games is None:
+            games = Game.objects.filter(is_active=True).order_by('name').select_related()
+            cache.set('all_games', games)
+        return games
 
 
 class GamesView(ListView):
