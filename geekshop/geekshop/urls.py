@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', cache(3600)(mainapp.MainView.as_view()), name='main'),
+    path('', mainapp.MainView.as_view(), name='main'),
     path('gallery/', include('mainapp.urls', namespace='gallery')),
     path('contacts/',mainapp.ContactsView.as_view(), name='contacts'),
     # path('good/', mainapp.good, name='good'),
