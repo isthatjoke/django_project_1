@@ -128,13 +128,16 @@ class GamesView(ListView):
 
 class GameView(ListView):
     model = Game
-    queryset = Game.objects.filter(is_active=True).order_by('name').select_related()
+    # queryset = Game.objects.filter(is_active=True).order_by('name').select_related()
     template_name = 'mainapp/good.html'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         game_pk = self.kwargs.get('pk', None)
-        game = Game.objects.get(id=game_pk)
+        game = cache.get(f'game_pk_{game_pk}')
+        if game is None:
+            game = Game.objects.get(id=game_pk)
+            cache.set(f'game_pk_{game_pk}', game)
         context['title'] = game.name
         context['links_menu'] = links_menu_cached()
         context['gametype'] = game.type
@@ -142,7 +145,8 @@ class GameView(ListView):
 
     def get_queryset(self):
         game_pk = self.kwargs.get('pk', None)
-        game = Game.objects.filter(id=game_pk).select_related()
+        game = cache.get(f'game_pk_{game_pk}')
+        # game = Game.objects.get(id=game_pk).select_related()
         return game
 
 
