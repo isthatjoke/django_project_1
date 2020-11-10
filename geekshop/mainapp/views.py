@@ -145,12 +145,11 @@ class GameView(ListView):
 
     def get_queryset(self):
         game_pk = self.kwargs.get('pk', None)
-        game = cache.get(f'game_pk_{game_pk}')
-        if game is None:
-            game = Game.objects.get(id=game_pk)
-            cache.set(f'game_pk_{game_pk}', game)
-        # game = Game.objects.get(id=game_pk)
-        print(cache.get(f'game_pk_{game_pk}'))
+        # game = cache.get(f'game_pk_{game_pk}')
+        # if game is None:
+        #     game = Game.objects.get(id=game_pk)
+        #     cache.set(f'game_pk_{game_pk}', game)
+        game = Game.objects.get(id=game_pk)
         return game
 
 
