@@ -121,7 +121,7 @@ class GamesView(ListView):
     def get_queryset(self):
         type_pk = self.kwargs.get('pk', None)
         games = cache.get(f'games_of_type_{type_pk}')
-        if games is not None:
+        if games is None:
             games = Game.objects.filter(is_active=True, type_id=type_pk).order_by('name').select_related()
             cache.set(f'games_of_type_{type_pk}', games)
         return games
