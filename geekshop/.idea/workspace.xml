@@ -13,10 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_7">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_7" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,6 +79,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -202,8 +200,8 @@
         <item itemvalue="Python.views" />
         <item itemvalue="Python.upload" />
         <item itemvalue="Python.forms" />
-        <item itemvalue="Python.forms" />
         <item itemvalue="Python.views" />
+        <item itemvalue="Python.upload" />
       </list>
     </recent_temporary>
   </component>
