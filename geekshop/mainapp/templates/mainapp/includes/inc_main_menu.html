@@ -68,7 +68,9 @@
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                     </li>
+                {% if not request.resolver_match.url_name == 'shopping_cart' %}
                     {% include 'mainapp/includes/inc_shopping_cart_in_menu.html' %}
+                {% endif %}
                     </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search">

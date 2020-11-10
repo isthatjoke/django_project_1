@@ -1,6 +1,9 @@
 from django.conf import settings
+from django.core.cache import cache
 from django.shortcuts import render, get_object_or_404
 import json, os
+
+from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, TemplateView
 from mainapp.models import Game, GameTypes
 from shopping_cartapp.models import ShoppingCart
@@ -25,6 +28,18 @@ def get_same_games(pk):
     return Game.objects.filter(type=game_type.type).exclude(pk=pk).select_related()
 
 
+def get_game_types_cached():
+    if settings.LOW_CACHE:
+        key = 'game_types'
+        game_types = cache.get(key)
+        if game_types is None:
+            game_types = get_game_types()
+            cache.set(key, game_types)
+        return game_types
+    else:
+        return get_game_types()
+
+
 def get_game_types():
     game_type = GameTypes.objects.filter(is_active=True).select_related()
     game_types = []
@@ -42,6 +57,7 @@ def get_game(pk):
     return Game.objects.filter(id=pk).first()
 
 
+@cache_page
 class MainView(TemplateView):
     template_name = 'mainapp/index.html'
 
@@ -52,6 +68,7 @@ class MainView(TemplateView):
         return context
 
 
+@cache_page
 class ContactsView(TemplateView):
     template_name = 'mainapp/contacts.html'
 
@@ -72,7 +89,7 @@ class GamesAllView(ListView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'gallery'
         context['links_menu'] = links_menu
-        context['game_types'] = get_game_types()
+        context['game_types'] = get_game_types_cached()
         return context
 
 
@@ -87,7 +104,7 @@ class GamesView(ListView):
         game_type = self.kwargs.get('pk', None)
         context['title'] = 'games'
         context['links_menu'] = links_menu
-        context['game_types'] = get_game_types()
+        context['game_types'] = get_game_types_cached()
         context['gametype'] = game_type
         return context
 
@@ -119,6 +136,7 @@ class GameView(ListView):
         return game
 
 
+@cache_page
 class ServicesView(TemplateView):
     template_name = 'mainapp/services.html'
 
@@ -129,6 +147,7 @@ class ServicesView(TemplateView):
         return context
 
 
+@cache_page
 class AboutView(TemplateView):
     template_name = 'mainapp/about.html'
 

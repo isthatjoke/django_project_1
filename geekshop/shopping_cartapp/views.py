@@ -35,11 +35,11 @@ with open(os.path.join(JSON_DIR, 'links_menu.json'), 'r') as file:
 #         return ShoppingCart.objects.get(user=self.request.user)
 
 
-# @login_required()
+@login_required()
 def shopping_cart(request):
     title = 'shopping cart'
     shopping_cart_items = ShoppingCart.objects.filter(user=request.user).select_related()
-
+    print(shopping_cart_items.query)
     content = {
         'links_menu': links_menu,
         'title': title,
