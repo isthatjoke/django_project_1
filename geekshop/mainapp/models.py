@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+from django.utils.functional import cached_property
 
 
 class GameTypes(models.Model):
@@ -29,12 +30,14 @@ class Game(models.Model):
     def __str__(self):
         return f'{self.name} {self.type.name}'
 
-    @staticmethod
-    def get_items():
+    @cached_property
+    def get_items_cached(self):
         return Game.objects.filter(is_active=True).select_related()
+
+    @staticmethod
+    def get_items(self):
+        return self.get_items_cached()
 
 
 class Router(models.Model):
     specifications = models.FileField(upload_to='router_specifications')
-
-
