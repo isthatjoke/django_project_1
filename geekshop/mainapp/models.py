@@ -30,14 +30,13 @@ class Game(models.Model):
     def __str__(self):
         return f'{self.name} {self.type.name}'
 
-    @cached_property
-    def get_items_cached(self):
-        return Game.objects.filter(is_active=True).select_related()
-
     @staticmethod
-    def get_items(self):
-        return self.get_items_cached()
+    @cached_property
+    def get_items():
+        return Game.objects.filter(is_active=True).select_related()
 
 
 class Router(models.Model):
     specifications = models.FileField(upload_to='router_specifications')
+
+
