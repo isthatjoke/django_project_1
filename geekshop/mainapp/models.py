@@ -1,3 +1,4 @@
+from django.core.cache import cache
 from django.db import models
 
 # Create your models here.
@@ -31,9 +32,12 @@ class Game(models.Model):
         return f'{self.name} {self.type.name}'
 
     @staticmethod
-    @cached_property
     def get_items():
-        return Game.objects.filter(is_active=True).select_related()
+        games = cache.get('all_games')
+        if games is None:
+            games = Game.objects.filter(is_active=True).order_by('name').select_related()
+            cache.set('all_games', games)
+        return games
 
 
 class Router(models.Model):
