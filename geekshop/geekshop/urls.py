@@ -23,12 +23,12 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', cache_page(3600)(mainapp.MainView.as_view()), name='main'),
+    path('', cache_page(120)(mainapp.MainView.as_view()), name='main'),
     path('gallery/', include('mainapp.urls', namespace='gallery')),
-    path('contacts/', cache_page(3600)(mainapp.ContactsView.as_view()), name='contacts'),
+    path('contacts/', cache_page(120)(mainapp.ContactsView.as_view()), name='contacts'),
     # path('good/', mainapp.good, name='good'),
-    path('about/', cache_page(3600)(mainapp.AboutView.as_view()), name='about'),
-    path('services/', cache_page(3600)(mainapp.ServicesView.as_view()), name='services'),
+    path('about/', cache_page(120)(mainapp.AboutView.as_view()), name='about'),
+    path('services/', cache_page(120)(mainapp.ServicesView.as_view()), name='services'),
     path('auth/', include('authapp.urls', namespace='auth')),
     path('shopping_cart/', include('shopping_cartapp.urls', namespace='shopping_cart')),
     path('admin/', include('adminapp.urls', namespace='admin')),
