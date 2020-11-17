@@ -14,7 +14,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_7">
-      <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2ccac190-cb97-42f6-88ab-1c251ec4633d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2ccac190-cb97-42f6-88ab-1c251ec4633d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4bc3e66-ce16-4f77-84a7-e36d372c0e3a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a4bc3e66-ce16-4f77-84a7-e36d372c0e3a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/orders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geekshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_services.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cartapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/shopping_cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/shopping_cart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +49,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="Python Script" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -63,7 +84,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="course_2_lesson_7" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -107,8 +128,8 @@
       <recent name="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.forms">
-    <configuration name="forms" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Django tests.Test: mainapp.tests_games.TestGamesTestCase.test_game_get_item">
+    <configuration name="Test: authapp.tests.TestAuthappTestCase.test_user_login" type="DjangoTestsConfigurationType" temporary="true">
       <module name="geekshop" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -116,18 +137,56 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/authapp" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/authapp/forms.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="TARGET" value="authapp.tests.TestAuthappTestCase.test_user_login" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: mainapp.tests.TestMainappTestCase.test_mainapp_urls" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="geekshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="mainapp.tests.TestMainappTestCase.test_mainapp_urls" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: mainapp.tests_games.TestGamesTestCase.test_game_get_item" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="geekshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="mainapp.tests_games.TestGamesTestCase.test_game_get_item" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
     <configuration name="upload" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -199,9 +258,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.views" />
-        <item itemvalue="Python.upload" />
-        <item itemvalue="Python.forms" />
+        <item itemvalue="Django tests.Test: mainapp.tests_games.TestGamesTestCase.test_game_get_item" />
+        <item itemvalue="Django tests.Test: authapp.tests.TestAuthappTestCase.test_user_login" />
+        <item itemvalue="Django tests.Test: mainapp.tests.TestMainappTestCase.test_mainapp_urls" />
         <item itemvalue="Python.views" />
         <item itemvalue="Python.upload" />
       </list>
@@ -242,13 +301,7 @@
       <workItem from="1604838268449" duration="10473000" />
       <workItem from="1604858987505" duration="249000" />
       <workItem from="1604860236819" duration="23313000" />
-    </task>
-    <task id="LOCAL-00007" summary="lesson_6">
-      <created>1602144155867</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1602144155867</updated>
+      <workItem from="1605457927224" duration="17498000" />
     </task>
     <task id="LOCAL-00008" summary="lesson_7">
       <created>1602445942423</created>
@@ -586,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605122078750</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="course_2_lesson_7">
+      <created>1605123920022</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1605123920022</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,11 +694,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="449" y="281" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1601160003925" />
-    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603548196902">
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605554931124">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1601999991292" />
-    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603548196902" />
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605554931124" />
     <state x="462" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604085704714">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -654,22 +714,26 @@
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1604326146872" />
     <state x="458" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.811@0.23.1440.811" timestamp="1604326027170" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1602264682516" />
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1601999645701">
+    <state width="1398" height="370" key="GridCell.Tab.0.bottom" timestamp="1605558046251">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1601999645701" />
-    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1601999645700">
+    <state width="1398" height="370" key="GridCell.Tab.0.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605558046251" />
+    <state width="1398" height="370" key="GridCell.Tab.0.center" timestamp="1605558046250">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1601999645700" />
-    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1601999645699">
+    <state width="1398" height="370" key="GridCell.Tab.0.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605558046250" />
+    <state width="1398" height="370" key="GridCell.Tab.0.left" timestamp="1605558046248">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1601999645699" />
-    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1601999645700">
+    <state width="1398" height="370" key="GridCell.Tab.0.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605558046248" />
+    <state width="1398" height="370" key="GridCell.Tab.0.right" timestamp="1605558046250">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1601999645700" />
+    <state width="1398" height="370" key="GridCell.Tab.0.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605558046250" />
     <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1601999645704">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -700,11 +764,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604169621176" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605122080308">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605123922085">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605107930556" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605122080308" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605123922085" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -717,15 +781,18 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="525" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1601321007428" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604316967279">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1605212585932">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604316967279" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603902165019" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605212585932" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/geekshop$upload.coverage" NAME="upload Coverage Results" MODIFIED="1601060867578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/upload" />
+    <SUITE FILE_PATH="coverage/geekshop$Test__mainapp_tests_games_TestGamesTestCase_test_game_get_item.coverage" NAME="Test: mainapp.tests_games.TestGamesTestCase.test_game_get_item Coverage Results" MODIFIED="1605558037757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/geekshop$forms.coverage" NAME="forms Coverage Results" MODIFIED="1601414965497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/authapp" />
+    <SUITE FILE_PATH="coverage/geekshop$Test__authapp_tests_TestAuthappTestCase_test_user_login.coverage" NAME="Test: authapp.tests.TestAuthappTestCase.test_user_login Coverage Results" MODIFIED="1605550311462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/geekshop$views.coverage" NAME="views Coverage Results" MODIFIED="1600886852659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mainapp" />
+    <SUITE FILE_PATH="coverage/geekshop$Test__mainapp_tests_TestMainappTestCase_test_mainapp_urls.coverage" NAME="Test: mainapp.tests.TestMainappTestCase.test_mainapp_urls Coverage Results" MODIFIED="1605457331199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

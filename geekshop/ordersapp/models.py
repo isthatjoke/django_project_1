@@ -28,6 +28,7 @@ class Order(models.Model):
     created = models.DateTimeField(verbose_name='made', auto_now_add=True)
     updated = models.DateTimeField(verbose_name='updated', auto_now=True)
     status = models.CharField(verbose_name='status', max_length=3, choices=ORDER_STATUS_CHOICES, default=FORMING)
+    paid = models.DateTimeField(verbose_name='payment_status', auto_now=False, null=True)
     is_active = models.BooleanField(verbose_name='active', default=True, db_index=True)
 
     class Meta:

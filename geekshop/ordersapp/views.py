@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.db import transaction
+from django.db.models import F
 from django.db.models.signals import pre_save, pre_delete
 from django.dispatch import receiver
 from django.forms import inlineformset_factory
@@ -8,7 +9,11 @@ from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 from django.urls import reverse_lazy, reverse
+from django.utils.datetime_safe import datetime
 from django.utils.decorators import method_decorator
+from datetime import datetime
+
+from django.utils.timezone import now
 from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 
@@ -136,7 +141,6 @@ class OrderRead(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(OrderRead, self).get_context_data(**kwargs)
-        print(context)
         context['title'] = 'order'
         return context
 
@@ -144,6 +148,7 @@ class OrderRead(DetailView):
 def order_forming_complete(request, pk):
     order = get_object_or_404(Order, pk=pk)
     order.status = Order.SENT_TO_PROCEED
+    order.paid = now()
     order.save()
 
     return HttpResponseRedirect(reverse('ordersapp:orders_list'))
@@ -152,7 +157,6 @@ def order_forming_complete(request, pk):
 def get_game_price(request, pk):
     if request.is_ajax():
         game = Game.objects.filter(pk=int(pk)).first()
-        print(game)
         if game:
             return JsonResponse({'price': game.price})
         else:
@@ -163,14 +167,14 @@ def get_game_price(request, pk):
 @receiver(pre_save, sender=ShoppingCart)
 def game_quantity_update_save(sender, update_fields, instance, **kwargs):
     if instance.pk:
-        instance.game.quantity -= instance.quantity - sender.get_item(instance.pk).quantity
+        instance.game.quantity = F('quantity') - (instance.quantity - sender.get_item(instance.pk).quantity)
     else:
-        instance.game.quantity -= instance.quantity
+        instance.game.quantity = F('quantity') - instance.quantity
     instance.game.save()
 
 
 @receiver(pre_delete, sender=OrderItem)
 @receiver(pre_delete, sender=ShoppingCart)
 def game_quantity_update_delete(sender, instance, **kwargs):
-    instance.game.quantity += instance.quantity
+    instance.game.quantity = F('quantity') + instance.quantity
     instance.game.save()

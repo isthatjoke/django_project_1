@@ -105,20 +105,20 @@ h3 {
     display: inline-block;
 }
 
-.container-services img {
-    vertical-align: middle;
-    background: url(../img/services_branch_red.png) 100% 100% no-repeat;
-    background-size: cover;
-}
+/*.container-services img {*/
+/*    vertical-align: middle;*/
+/*    background: url(../img/services_branch_red.png) 100% 100% no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
 
-.container-services a:hover {
-    cursor: pointer;
-    background: url(../img/services_branch_red.png) no-repeat 50% 50%;
-}
+/*.container-services a:hover {*/
+/*    cursor: pointer;*/
+/*    background: url(../img/services_branch_red.png) no-repeat 50% 50%;*/
+/*}*/
 
-.container-services a:hover img {
-  opacity: 0;
-}
+/*.container-services a:hover img {*/
+/*  opacity: 0;*/
+/*}*/
 
 
 
