@@ -143,9 +143,9 @@ class GameView(ListView):
         context = super().get_context_data(**kwargs)
         game_pk = self.kwargs.get('pk', None)
         game = cache.get(f'game_pk_{game_pk}')
-        context['title'] = game.name
+        # context['title'] = game.name
         context['links_menu'] = links_menu_cached()
-        context['gametype'] = game.type
+        # context['gametype'] = game.type
         return context
 
     def get_queryset(self):
@@ -164,6 +164,7 @@ class ServicesView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'services'
         context['links_menu'] = links_menu_cached()
+        context['host'] = settings.SERVER_NAME
         return context
 
 

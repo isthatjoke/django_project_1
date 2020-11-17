@@ -1,4 +1,7 @@
 from django.contrib.auth.decorators import user_passes_test
+from django.db.models import F
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -9,6 +12,15 @@ from authapp.forms import ShopUserRegisterForm
 from authapp.models import ShopUser
 from mainapp.models import GameTypes, Game
 from ordersapp.models import Order, OrderItem
+
+
+@receiver(pre_save, sender=GameTypes)
+def update_is_active_from_type_to_game(sender, instance, **kwargs):
+    if instance.pk:
+        if instance.is_active:
+            instance.game_set.update(is_active=True)
+        else:
+            instance.game_set.update(is_active=False)
 
 
 class AdminView(TemplateView):
@@ -146,6 +158,13 @@ class GameTypeUpdateView(UpdateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'update game type'
         return context
+    
+    def form_valid(self, form):
+        if 'discount' in form.cleaned_data:
+            discount = form.cleaned_data['discount']
+            if discount:
+                self.object.game_set.update(price=F('price') * (1 - discount / 100))
+        return super().form_valid(form)
 
 
 class GameTypeDeleteView(DeleteView):

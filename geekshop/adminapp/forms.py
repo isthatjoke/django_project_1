@@ -15,9 +15,12 @@ class ShopUserAdminEditForm(ShopUserEditForm):
 
 
 class GameTypeEditForm(forms.ModelForm):
+    discount = forms.IntegerField(label='discount', required=False, min_value=0, max_value=90, initial=0)
+
     class Meta:
         model = GameTypes
-        fields = '__all__'
+        # fields = '__all__'
+        exclude = ()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

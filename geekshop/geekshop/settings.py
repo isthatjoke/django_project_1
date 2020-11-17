@@ -13,33 +13,33 @@ with open(JSON_PATH + 'secret_key.json') as secret_key:
 SECRET_KEY = SECRET_KEY['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+# DEBUG = True
+DEBUG = False
 
-if DEBUG:
-   def show_toolbar(request):
-       return True
-
-DEBUG_TOOLBAR_CONFIG = {
-       'SHOW_TOOLBAR_CALLBACK': show_toolbar,
-   }
-
-DEBUG_TOOLBAR_PANELS = [
-    'debug_toolbar.panels.versions.VersionsPanel',
-    'debug_toolbar.panels.timer.TimerPanel',
-    'debug_toolbar.panels.settings.SettingsPanel',
-    'debug_toolbar.panels.headers.HeadersPanel',
-    'debug_toolbar.panels.request.RequestPanel',
-    'debug_toolbar.panels.sql.SQLPanel',
-    'debug_toolbar.panels.templates.TemplatesPanel',
-    'debug_toolbar.panels.staticfiles.StaticFilesPanel',
-    'debug_toolbar.panels.cache.CachePanel',
-    'debug_toolbar.panels.signals.SignalsPanel',
-    'debug_toolbar.panels.logging.LoggingPanel',
-    'debug_toolbar.panels.redirects.RedirectsPanel',
-    'debug_toolbar.panels.profiling.ProfilingPanel',
-    'template_profiler_panel.panels.template.TemplateProfilerPanel',
-    ]
+# if DEBUG:
+#    def show_toolbar(request):
+#        return True
+#
+# DEBUG_TOOLBAR_CONFIG = {
+#        'SHOW_TOOLBAR_CALLBACK': show_toolbar,
+#    }
+#
+# DEBUG_TOOLBAR_PANELS = [
+#     'debug_toolbar.panels.versions.VersionsPanel',
+#     'debug_toolbar.panels.timer.TimerPanel',
+#     'debug_toolbar.panels.settings.SettingsPanel',
+#     'debug_toolbar.panels.headers.HeadersPanel',
+#     'debug_toolbar.panels.request.RequestPanel',
+#     'debug_toolbar.panels.sql.SQLPanel',
+#     'debug_toolbar.panels.templates.TemplatesPanel',
+#     'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+#     'debug_toolbar.panels.cache.CachePanel',
+#     'debug_toolbar.panels.signals.SignalsPanel',
+#     'debug_toolbar.panels.logging.LoggingPanel',
+#     'debug_toolbar.panels.redirects.RedirectsPanel',
+#     'debug_toolbar.panels.profiling.ProfilingPanel',
+#     'template_profiler_panel.panels.template.TemplateProfilerPanel',
+#     ]
 
 
 ALLOWED_HOSTS = ['*']
@@ -60,9 +60,9 @@ INSTALLED_APPS = [
     'adminapp',
     'social_django',
     'ordersapp',
-    'debug_toolbar',
-    'template_profiler_panel',
-    'django_extensions',
+    # 'debug_toolbar',
+    # 'template_profiler_panel',
+    # 'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -209,15 +209,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_URL='/auth/login/'
 LOGIN_ERROR_URL = '/'
 
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 
 # email
@@ -237,6 +237,8 @@ EMAIL_HOST_PASSWORD = GMAIL['EMAIL_HOST_PASSWORD']
 EMAIL_USE_TLS = True
 SERVER_EMAIL = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
 # EMAIL_USE_SSL = False
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 #yandex 'wypksowgdnhotxio'

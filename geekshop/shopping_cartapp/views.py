@@ -2,6 +2,7 @@ import json
 import os
 from django.conf import settings
 from django.contrib.auth.decorators import login_required, user_passes_test
+from django.db.models import F
 from django.http import JsonResponse
 from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
 from django.template.loader import render_to_string
@@ -38,12 +39,13 @@ with open(os.path.join(JSON_DIR, 'links_menu.json'), 'r') as file:
 @login_required()
 def shopping_cart(request):
     title = 'shopping cart'
+    DOMAIN = settings.DOMAIN_NAME
     shopping_cart_items = ShoppingCart.objects.filter(user=request.user).select_related()
-    print(shopping_cart_items.query)
     content = {
         'links_menu': links_menu,
         'title': title,
         'shopping_cart_items': shopping_cart_items,
+        'domain': DOMAIN,
     }
     return render(request, 'shopping_cartapp/shopping_cart.html', content)
 
@@ -57,7 +59,7 @@ def add(request, pk=None):
     old_shopping_cart = ShoppingCart.get_game(user=request.user, game=game)
 
     if old_shopping_cart:
-        old_shopping_cart[0].quantity += 1
+        old_shopping_cart[0].quantity = F('quantity') + 1
         old_shopping_cart[0].save()
     else:
         new_shopping_cart = ShoppingCart(user=request.user, game=game)
