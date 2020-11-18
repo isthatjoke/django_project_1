@@ -282,21 +282,7 @@
       <workItem from="1604838268449" duration="10473000" />
       <workItem from="1604858987505" duration="249000" />
       <workItem from="1604860236819" duration="23313000" />
-      <workItem from="1605457927224" duration="25099000" />
-    </task>
-    <task id="LOCAL-00013" summary="course_2_lesson_3">
-      <created>1604305276389</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1604305276389</updated>
-    </task>
-    <task id="LOCAL-00014" summary="course_2_lesson_4">
-      <created>1604326399351</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1604326399351</updated>
+      <workItem from="1605457927224" duration="25868000" />
     </task>
     <task id="LOCAL-00015" summary="course_2_lesson_4">
       <created>1604326454369</created>
@@ -627,7 +613,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605721797237</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="course_2_lesson_8">
+      <created>1605723074014</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1605723074015</updated>
+    </task>
+    <task id="LOCAL-00063" summary="course_2_lesson_8">
+      <created>1605723367367</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1605723367367</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -746,11 +746,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604169621176" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605721801124">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605723368947">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605107930556" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605721801124" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605723368947" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
