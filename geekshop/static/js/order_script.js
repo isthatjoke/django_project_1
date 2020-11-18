@@ -1,6 +1,4 @@
-window.onload = setTimeout(start, 1000)
-
-function start() {
+window.onload = function () {
     let _quantity, _price, orderitem_num, delta_quantity, orderitem_quantity, delta_cost;
     let quantity_arr = [];
     let price_arr = [];
