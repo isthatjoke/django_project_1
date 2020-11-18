@@ -13,8 +13,8 @@ with open(JSON_PATH + 'secret_key.json') as secret_key:
 SECRET_KEY = SECRET_KEY['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 # if DEBUG:
 #    def show_toolbar(request):
@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'adminapp',
     'social_django',
     'ordersapp',
+    'searchapp',
     # 'debug_toolbar',
     # 'template_profiler_panel',
     # 'django_extensions',

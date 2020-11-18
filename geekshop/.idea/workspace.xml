@@ -13,29 +13,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_7">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2ccac190-cb97-42f6-88ab-1c251ec4633d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2ccac190-cb97-42f6-88ab-1c251ec4633d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a4bc3e66-ce16-4f77-84a7-e36d372c0e3a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a4bc3e66-ce16-4f77-84a7-e36d372c0e3a.xml" afterDir="false" />
+    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/templates/adminapp/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/templates/adminapp/orders.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/adminapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/geekshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_services.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ordersapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping_cartapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/shopping_cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/shopping_cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/inc_main_menu.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +32,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -84,7 +67,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="course_2_lesson_7" />
+        <entry key="$PROJECT_DIR$/.." value="course_2_lesson_8" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -117,15 +100,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/searchapp/templates/searchapp" />
       <recent name="$PROJECT_DIR$/adminapp/templates/adminapp" />
       <recent name="$PROJECT_DIR$/ordersapp/templates/ordersapp" />
       <recent name="$PROJECT_DIR$/geekshop/json" />
       <recent name="$PROJECT_DIR$/adminapp/templates" />
-      <recent name="$PROJECT_DIR$/static/css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/includes" />
     </key>
   </component>
   <component name="RunManager" selected="Django tests.Test: mainapp.tests_games.TestGamesTestCase.test_game_get_item">
@@ -301,21 +284,7 @@
       <workItem from="1604838268449" duration="10473000" />
       <workItem from="1604858987505" duration="249000" />
       <workItem from="1604860236819" duration="23313000" />
-      <workItem from="1605457927224" duration="17498000" />
-    </task>
-    <task id="LOCAL-00008" summary="lesson_7">
-      <created>1602445942423</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1602445942424</updated>
-    </task>
-    <task id="LOCAL-00009" summary="lesson_8">
-      <created>1602756993122</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1602756993122</updated>
+      <workItem from="1605457927224" duration="22676000" />
     </task>
     <task id="LOCAL-00010" summary="course_2_lesson_1">
       <created>1603367053148</created>
@@ -646,7 +615,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605123920022</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="course_2_lesson_8">
+      <created>1605639085324</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1605639085324</updated>
+    </task>
+    <task id="LOCAL-00058" summary="course_2_lesson_8">
+      <created>1605642557454</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1605642557455</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +666,8 @@
     <MESSAGE value="course_2_lesson_5" />
     <MESSAGE value="course_2_lesson_6" />
     <MESSAGE value="course_2_lesson_7" />
-    <option name="LAST_COMMIT_MESSAGE" value="course_2_lesson_7" />
+    <MESSAGE value="course_2_lesson_8" />
+    <option name="LAST_COMMIT_MESSAGE" value="course_2_lesson_8" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="135" key="#Inspections" timestamp="1604255322853">
@@ -764,11 +748,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604169621176" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605123922085">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605642567771">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605107930556" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605123922085" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605642567771" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
