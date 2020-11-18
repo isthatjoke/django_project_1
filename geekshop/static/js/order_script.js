@@ -29,8 +29,8 @@ window.onload = function () {
             order_total_quantity += quantity_arr[i];
             order_total_cost += quantity_arr[i] * price_arr[i];
         }
-        $('.order_total_quantity').html(order_total_quantity.toString());
-        $('.order_total_cost').html(Number(order_total_cost.toFixed(2)).toString());
+        $('.order_total_quantity').html('Total Quantity: ' + order_total_quantity.toString());
+        $('.order_total_cost').html('Total Cost: ' + Number(order_total_cost.toFixed(2)).toString() + '$');
     }
 
     $('.order_form').on('click', 'input[type="number"]', function () {
@@ -118,8 +118,8 @@ window.onload = function () {
             order_total_quantity += quantity_arr[i];
             order_total_cost += quantity_arr[i] * price_arr[i];
         }
-        $('.order_total_quantity').html(order_total_quantity.toString());
-        $('.order_total_cost').html(Number(order_total_cost.toFixed(2)).toString());
+        $('.order_total_quantity').html('Total Quantity: ' + order_total_quantity.toString());
+        $('.order_total_cost').html('Total Cost: ' + Number(order_total_cost.toFixed(2)).toString() + ' $');
     }
 }
 
