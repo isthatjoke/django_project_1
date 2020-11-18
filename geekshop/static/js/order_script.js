@@ -55,8 +55,8 @@ window.onload = function () {
     //     orderSummaryUpdate(price_arr[orderitem_num], delta_quantity);
     //     });
 
-    $('.order_form select').change(function () {
-    let target = event.target;
+    $('.order_form select').change(function (e) {
+    let target = e.target;
     orderitem_num = parseInt(target.name.replace('orderitems-', '').replace('-game', ''));
     let orderitem_game_pk = target.options[target.selectedIndex].value;
 
@@ -69,7 +69,7 @@ window.onload = function () {
                     if (isNaN(quantity_arr[orderitem_num])) {
                         quantity_arr[orderitem_num] = 0;
                     }
-                    let price_html = '<span>' + data.price.toString().replace('.', ',') + '</span> $';
+                    let price_html = '<span>' + data.price.toString() + '</span> $';
                     let current_tr = $('.order_form table').find('tr:eq(' + (orderitem_num + 1) + ')');
                     current_tr.find('td:eq(2)').html(price_html);
 
