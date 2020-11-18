@@ -13,9 +13,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_8">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/order_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/order_script.js" afterDir="false" />
+    <list default="true" id="2ccf2ff4-23eb-4f59-be49-2967ed268ca8" name="Default Changelist" comment="course_2_lesson_8+">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authapp/templates/authapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/authapp/templates/authapp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/geekshop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ordersapp/templates/ordersapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/ordersapp/templates/ordersapp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchapp/templates/searchapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/searchapp/templates/searchapp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopping_cartapp/templates/shopping_cartapp/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +70,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="course_2_lesson_8" />
+        <entry key="$PROJECT_DIR$/.." value="course_2_lesson_8_search" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -282,13 +288,6 @@
       <workItem from="1604858987505" duration="249000" />
       <workItem from="1604860236819" duration="23313000" />
       <workItem from="1605457927224" duration="26452000" />
-    </task>
-    <task id="LOCAL-00017" summary="course_2_lesson_4_before_server">
-      <created>1604396588046</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1604396588046</updated>
     </task>
     <task id="LOCAL-00018" summary="course_2_lesson_4_before_server+db">
       <created>1604397095734</created>
@@ -626,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605728737902</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="course_2_lesson_8+">
+      <created>1605731269258</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1605731269258</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +670,8 @@
     <MESSAGE value="course_2_lesson_6" />
     <MESSAGE value="course_2_lesson_7" />
     <MESSAGE value="course_2_lesson_8" />
-    <option name="LAST_COMMIT_MESSAGE" value="course_2_lesson_8" />
+    <MESSAGE value="course_2_lesson_8+" />
+    <option name="LAST_COMMIT_MESSAGE" value="course_2_lesson_8+" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="135" key="#Inspections" timestamp="1604255322853">
@@ -736,6 +743,10 @@
     </state>
     <state width="221" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1600982308047" />
     <state width="221" height="457" key="HiddenNamespacesPopup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1603480096510" />
+    <state x="144" y="79" key="MergeDialog" timestamp="1605731154114">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="144" y="79" key="MergeDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605731154114" />
     <state x="229" y="89" key="SettingsEditor" timestamp="1604838109437">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -745,11 +756,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="450" y="200" width="540" height="524" key="StructurePopup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1604169621176" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605728739583">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605731271000">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605107930556" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605728739583" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605731271000" />
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -762,11 +773,15 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="525" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1601321007428" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1605212585932">
+    <state x="395" y="170" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605731148754">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="395" y="170" key="git4idea.branch.GitSmartOperationDialog/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605731148754" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1605733015218">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604316967279" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605212585932" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605733015218" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/geekshop$upload.coverage" NAME="upload Coverage Results" MODIFIED="1601060867578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/upload" />
