@@ -88,8 +88,8 @@ window.onload = function () {
         order_total_cost = Number((order_total_cost + delta_cost).toFixed(2));
         order_total_quantity = order_total_quantity + delta_quantity;
 
-        $('.order_total_cost').html(order_total_cost.toString());
-        $('.order_total_quantity').html(order_total_quantity.toString());
+        $('.order_total_quantity').html('Total Quantity: ' + order_total_quantity.toString());
+        $('.order_total_cost').html('Total Cost: ' + Number(order_total_cost.toFixed(2)).toString() + ' $');
     }
 
     $('.formset_row').formset({
