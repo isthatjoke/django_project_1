@@ -238,11 +238,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Django tests.Test: mainapp.tests_games.TestGamesTestCase.test_game_get_item" />
-        <item itemvalue="Django tests.Test: authapp.tests.TestAuthappTestCase.test_user_login" />
-        <item itemvalue="Django tests.Test: mainapp.tests.TestMainappTestCase.test_mainapp_urls" />
         <item itemvalue="Python.views" />
         <item itemvalue="Python.upload" />
+        <item itemvalue="Django tests.Test: mainapp.tests_games.TestGamesTestCase.test_game_get_item" />
+        <item itemvalue="Django tests.Test: mainapp.tests.TestMainappTestCase.test_mainapp_urls" />
+        <item itemvalue="Django tests.Test: authapp.tests.TestAuthappTestCase.test_user_login" />
       </list>
     </recent_temporary>
   </component>
