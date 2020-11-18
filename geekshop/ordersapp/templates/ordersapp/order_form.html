@@ -36,10 +36,10 @@
                     {{ field.errors.as_ul }}
                     {% if field.name != 'price' %}
                         {% if field.name == 'game' %}
-                            {% cache 3600 orderitemform_game field.value %}
-                            {{ field }}
-                            {% endcache %}
-                            {% else %}
+{#                            {% cache 3600 orderitemform_game field.value %}#}
+{#                            {{ field }}#}
+{#                            {% endcache %}#}
+{#                            {% else %}#}
                             {{ field }}
                             {% endif %}
                     {% else %}
