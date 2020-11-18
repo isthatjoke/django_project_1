@@ -105,17 +105,17 @@ WSGI_APPLICATION = 'geekshop.wsgi.application'
 # Database
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'geekshop',
-        'USER': 'django',
-        'PASSWORD': 'geekbrains',
-        'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'geekshop',
+    #     'USER': 'django',
+    #     'PASSWORD': 'geekbrains',
+    #     'HOST': 'localhost',
+    # }
 }
 
 
@@ -210,15 +210,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_URL = '/auth/login/'
 LOGIN_ERROR_URL = '/'
 
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 
 # email
@@ -227,10 +227,10 @@ with open(JSON_PATH + 'gmail_email.json') as gmail:
     GMAIL = json.load(gmail)
 
 
-DOMAIN_NAME = 'djangopj.ru'
-SERVER_NAME = 'djangopj.ru'
-# DOMAIN_NAME = 'http://localhost:8000'
-# SERVER_NAME = 'http://localhost:8000'
+# DOMAIN_NAME = 'djangopj.ru'
+# SERVER_NAME = 'djangopj.ru'
+DOMAIN_NAME = 'http://localhost:8000'
+SERVER_NAME = 'http://localhost:8000'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = GMAIL['EMAIL_HOST_USER']
