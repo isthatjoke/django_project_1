@@ -1,0 +1,37 @@
+Index: ordersapp/templates/ordersapp/base.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% load static %}\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>\n        {% block title %}\n        {{ title|title }}\n        {% endblock %}\n    </title>\n{% block css %}\n        <link rel=\"shortcut icon\" type=\"image/png\" href=\"{% static 'img/favicon-32x32.png' %}\"/>\n        <link rel=\"stylesheet\" href=\"{% static 'css/solid.min.css' %}\">\n        <link rel=\"stylesheet\" href=\"{% static 'css/fontawesome.min.css' %}\">\n        <link rel=\"stylesheet\" href=\"{% static 'css/brands.min.css' %}\">\n        <link rel=\"stylesheet\" href=\"{% static 'css/bootstrap.css' %}\">\n        <link rel=\"stylesheet\" href=\"{% static 'css/bootstrap-grid.css' %}\">\n    {% endblock %}\n    {% block js %}\n        <script src=\"{% static 'js/jquery-3.2.1.min.js' %}\"></script>\n        <script src=\"{% static 'js/bootstrap.min.js' %}\"></script>\n        <script src=\"{% static 'js/jquery.formset.js' %}\"></script>\n    {% endblock %}\n</head>\n<body>\n\n{% block content %}\n\n{% endblock%}\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ordersapp/templates/ordersapp/base.html	(revision 1504259c3320a36980e82566e0ed586617cde31b)
++++ ordersapp/templates/ordersapp/base.html	(date 1605731146204)
+@@ -20,6 +20,7 @@
+         <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+         <script src="{% static 'js/bootstrap.min.js' %}"></script>
+         <script src="{% static 'js/jquery.formset.js' %}"></script>
++        <script src="{% static 'js/order_script.js' %}"></script>
+     {% endblock %}
+ </head>
+ <body>
+Index: ordersapp/templates/ordersapp/order_form.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends 'ordersapp/base.html' %}\n{% load static %}\n{% load cache %}\n{% block content %}\n            <script src=\"{% static 'js/jquery.formset.js' %}\"></script>\n        <script src=\"{% static 'js/order_script.js' %}\"></script>\n {% include 'ordersapp/includes/inc_order_summary.html' %}\n    <div class=\"container mt-5\">\n    <div class=\"row\">\n        <div class=\"col order_form\">\n            <form action=\"\" method=\"post\">\n                {% csrf_token %}\n                {{ form.as_p }}\n                <table class=\"table table-dark\">\n                    {{ orderitems.management_form }}\n                    {% for form in orderitems.forms %}\n                    {% if forloop.first %}\n                    <thead>\n                    <tr>\n                    {% for field in form.visible_fields %}\n                        <th scope=\"col\" class=\"{% cycle 'td1' 'td2' 'td3' 'td4' %} order formset_td\">\n                            {{ field.label|capfirst }}\n                        </th>\n                    {% endfor %}\n                    </tr>\n                    </thead>\n                {% endif %}\n\n                <tr class=\"formset_row\">\n                    {% for field in form.visible_fields %}\n                    <td class=\"{% cycle 'td1' 'td2' 'td3' 'td4' %} order formset_td\">\n                        {% if forloop.first %}\n                        {% for hidden in form.hidden_fields %}\n                        {{ hidden }}\n                        {% endfor %}\n                    {% endif %}\n                    {{ field.errors.as_ul }}\n                    {% if field.name != 'price' %}\n                        {% if field.name == 'game' %}\n                            {% cache 3600 orderitemform_game field.value %}\n                            {{ field }}\n                            {% endcache %}\n                            {% else %}\n                            {{ field }}\n                            {% endif %}\n                    {% else %}\n                    {% if field.value %}\n                    <span class=\"orderitems-{{ forloop.parentloop.counter0 }}-price\">\n                        {{ field.value }}\n                    </span> $\n                    {% endif %}\n                    {% endif %}\n                    </td>\n                {% endfor %}\n                </tr>\n                {% endfor %}\n                </table>\n            <input class=\"form-control btn btn-outline-success\" type=\"submit\" value=\"save\">\n\n           {% include 'ordersapp/includes/inc_order_actions.html' %}\n            </form>\n        </div>\n    </div>\n    </div>\n\n{% endblock %}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ordersapp/templates/ordersapp/order_form.html	(revision 1504259c3320a36980e82566e0ed586617cde31b)
++++ ordersapp/templates/ordersapp/order_form.html	(date 1605731146213)
+@@ -2,8 +2,8 @@
+ {% load static %}
+ {% load cache %}
+ {% block content %}
+-            <script src="{% static 'js/jquery.formset.js' %}"></script>
+-        <script src="{% static 'js/order_script.js' %}"></script>
++
++
+  {% include 'ordersapp/includes/inc_order_summary.html' %}
+     <div class="container mt-5">
+     <div class="row">
