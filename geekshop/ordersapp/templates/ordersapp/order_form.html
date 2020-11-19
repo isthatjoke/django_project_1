@@ -2,7 +2,8 @@
 {% load static %}
 {% load cache %}
 {% block content %}
-
+<script src="{% static 'js/jquery.formset.js' %}"></script>
+<script src="{% static 'js/order_script.js' %}"></script>
  {% include 'ordersapp/includes/inc_order_summary.html' %}
     <div class="container mt-5">
     <div class="row">
