@@ -766,6 +766,7 @@
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605107930556" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605796639104" />
+
     <state x="594" y="344" width="323" height="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601021932925">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -774,10 +775,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="566" y="344" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog/0.0.1440.900@0.0.1440.900" timestamp="1601021907050" />
-    <state x="525" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601321007428">
+    <state x="525" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605795554997">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="525" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1601321007428" />
+    <state x="525" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1605795554997" />
     <state x="395" y="170" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605731148754">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
