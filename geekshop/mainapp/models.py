@@ -20,7 +20,7 @@ class GameTypes(models.Model):
 
 class Game(models.Model):
     type = models.ForeignKey(GameTypes, on_delete=models.CASCADE)
-    name = models.CharField(verbose_name="name", max_length=30)
+    name = models.CharField(verbose_name="name", max_length=50)
     image = models.ImageField(upload_to="games_images", blank=True)
     short_desc = models.CharField(verbose_name="short description", max_length=70, blank=True)
     description = models.TextField(verbose_name="description", blank=True)
