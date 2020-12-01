@@ -2,7 +2,6 @@ from django.conf import settings
 from django.core.cache import cache
 from django.shortcuts import render, get_object_or_404
 import json, os
-
 from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, TemplateView
 from mainapp.models import Game, GameTypes
@@ -176,8 +175,6 @@ class AboutView(TemplateView):
         context['title'] = 'about'
         context['links_menu'] = links_menu_cached()
         return context
-
-
 
 
 

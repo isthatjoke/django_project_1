@@ -35,6 +35,7 @@ urlpatterns = [
     path('', include('social_django.urls', namespace='social')),
     path('order/', include('ordersapp.urls', namespace='order')),
     path('search/', include('searchapp.urls', namespace='search')),
+    path('api/', include('apiapp.urls', namespace='api'))
 ]
 
 
